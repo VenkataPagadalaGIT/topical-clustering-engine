@@ -1,6 +1,6 @@
 # Installation Guide
 
-Complete guide to installing and configuring the Telecom Query Classification Tool.
+Complete guide to installing and configuring the Topical Clustering Engine.
 
 ---
 
@@ -98,13 +98,13 @@ python3.11 --version
 
 ```bash
 # Using HTTPS
-git clone https://github.com/VenkataPagadalaGIT/telecom-query-classifier.git
+git clone https://github.com/VenkataPagadalaGIT/topical-clustering-engine.git
 
 # Or using SSH
-git clone git@github.com:VenkataPagadalaGIT/telecom-query-classifier.git
+git clone git@github.com:VenkataPagadalaGIT/topical-clustering-engine.git
 
 # Navigate to project
-cd telecom-query-classifier
+cd topical-clustering-engine
 ```
 
 ---
@@ -255,7 +255,7 @@ chmod +x start_app.sh
 ## Directory Structure After Installation
 
 ```
-telecom-query-classifier/
+topical-clustering-engine/
 ├── venv/                    # Virtual environment (created)
 ├── uploads/                 # Uploaded files (created on first use)
 ├── results/                 # Classification results (created)
@@ -473,7 +473,7 @@ pip uninstall flask pandas openpyxl
 If you encounter issues:
 
 1. Check this troubleshooting guide
-2. Search [GitHub Issues](https://github.com/VenkataPagadalaGIT/telecom-query-classifier/issues)
+2. Search [GitHub Issues](https://github.com/VenkataPagadalaGIT/topical-clustering-engine/issues)
 3. Create a new issue with:
    - Error message
    - Python version

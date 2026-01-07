@@ -1,6 +1,6 @@
 # Screenshots
 
-This folder contains screenshots of the Telecom Query Classification Tool.
+This folder contains screenshots of the Topical Clustering Engine.
 
 ## Required Screenshots
 

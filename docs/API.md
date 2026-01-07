@@ -1,6 +1,6 @@
 # API Reference
 
-Complete API documentation for the Telecom Query Classification Tool.
+Complete API documentation for the Topical Clustering Engine.
 
 ---
 

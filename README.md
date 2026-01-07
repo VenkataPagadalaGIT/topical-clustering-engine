@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/screenshots/logo.png" alt="Telecom Query Classifier" width="120">
+  <img src="docs/screenshots/logo.png" alt="Topical Clustering Engine" width="120">
 </p>
 
-<h1 align="center">Telecom Query Classification Tool</h1>
+<h1 align="center">Topical Clustering Engine</h1>
 
 <p align="center">
   <strong>Enterprise-grade search query classification with 5-level hierarchical taxonomy</strong>
@@ -27,7 +27,7 @@
 
 ## Overview
 
-The **Telecom Query Classification Tool** is a production-ready web application that automatically classifies telecom-related search queries into a comprehensive 5-level hierarchical taxonomy. Designed for SEO professionals, content strategists, and data analysts in the telecommunications industry.
+The **Topical Clustering Engine** is a production-ready web application that automatically classifies search queries into a comprehensive 5-level hierarchical taxonomy. Designed for SEO professionals, content strategists, and data analysts working with large keyword datasets.
 
 ### Why This Tool?
 
@@ -128,8 +128,8 @@ The **Telecom Query Classification Tool** is a production-ready web application 
 
 ```bash
 # Clone the repository
-git clone https://github.com/VenkataPagadalaGIT/telecom-query-classifier.git
-cd telecom-query-classifier
+git clone https://github.com/VenkataPagadalaGIT/topical-clustering-engine.git
+cd topical-clustering-engine
 
 # Create virtual environment
 python3 -m venv venv
@@ -261,7 +261,7 @@ Content-Type: application/json
 ## File Structure
 
 ```
-telecom-query-classifier/
+topical-clustering-engine/
 ├── app.py                          # Flask web application
 ├── telecom_classifier.py           # Classification engine
 ├── learning_engine.py              # Adaptive learning system
@@ -377,13 +377,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/VenkataPagadalaGIT/telecom-query-classifier/issues)
+- **Issues**: [GitHub Issues](https://github.com/VenkataPagadalaGIT/topical-clustering-engine/issues)
 - **Documentation**: [docs/](docs/)
 
 ---
 
 <p align="center">
   <strong>Built for SEO Professionals</strong><br>
-  <a href="https://github.com/VenkataPagadalaGIT/telecom-query-classifier/issues">Report Bug</a> •
-  <a href="https://github.com/VenkataPagadalaGIT/telecom-query-classifier/issues">Request Feature</a>
+  <a href="https://github.com/VenkataPagadalaGIT/topical-clustering-engine/issues">Report Bug</a> •
+  <a href="https://github.com/VenkataPagadalaGIT/topical-clustering-engine/issues">Request Feature</a>
 </p>
