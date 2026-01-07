@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topical Clustering Engine | Enterprise Grade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #DC2626;
+            --primary-red-dark: #B91C1C;
+            --primary-red-light: #EF4444;
+            --accent-red: #FCA5A5;
+            --black: #000000;
+            --dark-gray: #0A0A0A;
+            --medium-gray: #1A1A1A;
+            --light-gray: #2A2A2A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A3A3A3;
+            --border-color: #333333;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --info: #3B82F6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1A0000 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(220, 38, 38, 0.1);
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 24px;
+            font-size: 13px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* Tabs */
+        .main-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            background: var(--dark-gray);
+            padding: 8px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .main-tab {
+            flex: 1;
+            padding: 16px 24px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .main-tab:hover {
+            background: var(--medium-gray);
+            color: var(--text-primary);
+        }
+
+        .main-tab.active {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            color: var(--text-primary);
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        /* Tab Content */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Single Query Input */
+        .single-query-section {
+            background: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 32px;
+        }
+
+        .input-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .keyword-input-wrapper {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .keyword-input {
+            width: 100%;
+            padding: 20px 24px;
+            background: var(--black);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .keyword-input:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: var(--light-gray);
+            color: white;
+            border: 1px solid var(--border-color);
+            padding: 16px 40px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--medium-gray);
+            border-color: var(--primary-red);
+        }
+
+        /* Single Result Card */
+        .single-result {
+            background: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 24px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .result-query {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .confidence-badge {
+            padding: 8px 16px;
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid var(--primary-red);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-red);
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .result-item {
+            background: var(--black);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .result-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .result-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .result-value.highlight {
+            color: var(--primary-red);
+            font-size: 18px;
+        }
+
+        /* Upload Section */
+        .upload-section {
+            background: var(--dark-gray);
+            border: 2px dashed var(--border-color);
+            border-radius: 16px;
+            padding: 80px 40px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .upload-section:hover {
+            border-color: var(--primary-red);
+            background: var(--medium-gray);
+        }
+
+        .upload-section:hover::before {
+            opacity: 1;
+        }
+
+        .upload-section.dragover {
+            border-color: var(--primary-red);
+            background: var(--medium-gray);
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+        }
+
+        .upload-section:hover .upload-icon {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .upload-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .upload-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .file-types {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+        }
+
+        /* Processing */
+        .processing {
+            display: none;
+            text-align: center;
+            padding: 80px 40px;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--border-color);
+            border-top: 3px solid var(--primary-red);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 24px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+        }
+
+        /* Summary Cards */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+        }
+
+        .summary-card h3 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .summary-card p {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Data Table */
+        .table-container {
+            background: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-top: 32px;
+        }
+
+        .table-header {
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .table-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-export {
+            padding: 10px 20px;
+            background: var(--black);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-export:hover {
+            border-color: var(--primary-red);
+            background: var(--medium-gray);
+        }
+
+        .filters {
+            padding: 24px 32px;
+            display: flex;
+            gap: 16px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .filter-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 16px;
+            background: var(--black);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-input:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .filter-select {
+            padding: 12px 16px;
+            background: var(--black);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 200px;
+        }
+
+        .table-scroll {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            background: var(--black);
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        .data-table tr:hover {
+            background: rgba(220, 38, 38, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-topic {
+            background: rgba(220, 38, 38, 0.1);
+            color: var(--primary-red);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .badge-intent {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3B82F6;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .badge-funnel {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10B981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        /* Grouped View */
+        .topic-group {
+            background: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .topic-group-header {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .topic-group-header:hover {
+            background: rgba(220, 38, 38, 0.05);
+        }
+
+        .topic-name {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .topic-count {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .topic-items {
+            padding: 24px;
+            border-top: 1px solid var(--border-color);
+            display: none;
+            background: var(--black);
+        }
+
+        .topic-items.expanded {
+            display: block;
+        }
+
+        .query-item {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .query-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Error */
+        .error-message {
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid var(--primary-red);
+            color: var(--primary-red);
+            padding: 16px 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: none;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 16px 20px;
+            }
+
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                flex-direction: column;
+            }
+
+            .query-item {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Feedback buttons */
+        .feedback-btn {
+            opacity: 0.5;
+            transform: scale(1);
+        }
+
+        .feedback-btn:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .feedback-btn.active-up {
+            opacity: 1;
+            filter: drop-shadow(0 0 4px #10b981);
+        }
+
+        .feedback-btn.active-down {
+            opacity: 1;
+            filter: drop-shadow(0 0 4px #dc2626);
+        }
+
+        /* Improved table styling */
+        .data-table th {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            color: white;
+            font-weight: 600;
+            padding: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .data-table tr:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                <div class="logo-text">
+                    <h1>Topical Clustering Engine</h1>
+                    <p>Enterprise Grade</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <div class="stat-value" id="headerProcessed">0</div>
+                    <div class="stat-label">Processed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="headerTopics">0</div>
+                    <div class="stat-label">Topics</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="headerRate">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="error-message" id="errorMessage"></div>
+
+        <!-- Main Tabs -->
+        <div class="main-tabs">
+            <button class="main-tab active" onclick="switchMainTab('single', event)">Single Query</button>
+            <button class="main-tab" onclick="switchMainTab('bulk', event)">Bulk Upload</button>
+            <button class="main-tab" onclick="switchMainTab('sample', event)">Try Sample Data</button>
+        </div>
+
+        <!-- Single Query Tab -->
+        <div id="singleTab" class="tab-panel active">
+            <div class="single-query-section">
+                <div class="input-group">
+                    <label>Enter Your Keyword or Query</label>
+                    <div class="keyword-input-wrapper">
+                        <input type="text" id="singleKeyword" class="keyword-input"
+                               placeholder="e.g., buy unlimited data plan"
+                               onkeypress="if(event.key==='Enter') classifySingleQuery()">
+                    </div>
+                    <button class="btn-primary" onclick="classifySingleQuery()">Classify Query</button>
+                </div>
+            </div>
+
+            <div id="singleResult" class="single-result hidden"></div>
+        </div>
+
+        <!-- Bulk Upload Tab -->
+        <div id="bulkTab" class="tab-panel">
+            <div id="uploadSection" class="upload-section">
+                <div class="upload-icon">📊</div>
+                <h2 class="upload-title">Upload Your Query Data</h2>
+                <p class="upload-subtitle">CSV or Excel file with queries and metadata (URL, CPC, Rankings, etc.)</p>
+                <input type="file" id="fileInput" class="hidden" accept=".csv,.xlsx,.xls,.tsv">
+                <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                    Choose File
+                </button>
+                <p id="fileName" style="margin-top: 16px; color: var(--primary-red); font-weight: 600;"></p>
+                <p class="file-types">Supported: CSV, Excel (.xlsx, .xls), TSV</p>
+            </div>
+
+            <div id="processingSection" class="processing">
+                <div class="spinner"></div>
+                <h3>Processing Your Data...</h3>
+                <p style="color: var(--text-secondary); margin-top: 8px;">Analyzing and grouping queries</p>
+            </div>
+
+            <div id="resultsSection" class="results-section">
+                <div class="summary-cards" id="summaryCards"></div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-title">Classification Results</div>
+                        <div class="table-actions">
+                            <button class="btn-export" onclick="applyLearning(event)" style="background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%); color: white;">
+                                🧠 Learn & Update Knowledge
+                            </button>
+                            <button class="btn-export" onclick="exportFile('excel')">📥 Export Excel</button>
+                            <button class="btn-export" onclick="exportFile('grouped-csv')">📋 Export CSV</button>
+                            <button class="btn-export" onclick="resetUpload()">🔄 New Upload</button>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+                        <input type="text" class="filter-input" id="searchInput" placeholder="Search queries..." onkeyup="filterTable()">
+                        <select class="filter-select" id="topicFilter" onchange="filterTable()">
+                            <option value="">All Topics</option>
+                        </select>
+                        <select class="filter-select" id="intentFilter" onchange="filterTable()">
+                            <option value="">All Intents</option>
+                        </select>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="data-table" id="dataTable">
+                            <thead id="tableHeader"></thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="groupedView" style="margin-top: 32px;"></div>
+            </div>
+        </div>
+
+        <!-- Sample Data Tab -->
+        <div id="sampleTab" class="tab-panel">
+            <div class="single-query-section">
+                <h2 style="margin-bottom: 24px; text-align: center;">Try Sample Queries</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <button class="btn-primary" onclick="loadSampleData()" style="width: 100%; margin-bottom: 16px;">
+                        📊 Load Sample Dataset (40 Queries)
+                    </button>
+                    <p style="text-align: center; color: var(--text-secondary); font-size: 14px;">
+                        Sample includes: URL, CPC, Rankings, Search Volume, and Keyword Difficulty
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = [];
+        let resultsFilename = '';
+        let originalColumns = [];
+
+        // File upload
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            console.log('📂 File input change event triggered');
+            const file = e.target.files[0];
+            console.log('📄 Selected file:', file);
+            if (file) {
+                console.log('✅ File valid:', file.name, file.size, 'bytes');
+                document.getElementById('fileName').textContent = file.name;
+                uploadFile(file);
+            } else {
+                console.warn('⚠️ No file selected');
+            }
+        });
+
+        // Drag and drop
+        const uploadSection = document.getElementById('uploadSection');
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.classList.add('dragover');
+        });
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.classList.remove('dragover');
+        });
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file) {
+                document.getElementById('fileInput').files = e.dataTransfer.files;
+                document.getElementById('fileName').textContent = file.name;
+                uploadFile(file);
+            }
+        });
+
+        function switchMainTab(tab, event) {
+            document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+
+            // Only add active class to event target if event exists (clicked from tab)
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                // Find and activate the tab button programmatically
+                document.querySelectorAll('.main-tab').forEach(t => {
+                    if (t.textContent.toLowerCase().includes(tab.replace('Tab', '').replace(/([A-Z])/g, ' $1').trim().toLowerCase())) {
+                        t.classList.add('active');
+                    }
+                });
+            }
+            document.getElementById(tab + 'Tab').classList.add('active');
+        }
+
+        function classifySingleQuery() {
+            const keyword = document.getElementById('singleKeyword').value.trim();
+            if (!keyword) {
+                showError('Please enter a keyword or query');
+                return;
+            }
+
+            // Create FormData with single query
+            const formData = new FormData();
+            const blob = new Blob([`Query\n${keyword}`], { type: 'text/csv' });
+            formData.append('file', blob, 'single_query.csv');
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    showError(data.error);
+                } else {
+                    displaySingleResult(data.data[0]);
+                }
+            })
+            .catch(error => {
+                showError('Error classifying query: ' + error);
+            });
+        }
+
+        function displaySingleResult(result) {
+            const resultDiv = document.getElementById('singleResult');
+            resultDiv.classList.remove('hidden');
+
+            const feedbackKey = `single-${result.query}`;
+            const savedFeedback = localStorage.getItem(feedbackKey);
+
+            resultDiv.innerHTML = `
+                <div class="result-header">
+                    <div class="result-query">"${result.query}"</div>
+                    <div class="confidence-badge">Confidence: ${result.confidence_score}</div>
+                </div>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label">Topical Group</div>
+                        <div class="result-value highlight">${result.topical_group}</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">L1 Category</div>
+                        <div class="result-value">${result.L1_category}</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">L2 Subcategory</div>
+                        <div class="result-value">${result.L2_subcategory}</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Search Intent</div>
+                        <div class="result-value">${result.L3_intent}</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Intent Subcategory</div>
+                        <div class="result-value">${result.L3_intent_sub}</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Funnel Stage</div>
+                        <div class="result-value">${result.funnel_stage}</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Commercial Score</div>
+                        <div class="result-value highlight">${result.commercial_score}/100</div>
+                    </div>
+                </div>
+                <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%); border: 1px solid rgba(220, 38, 38, 0.3); border-radius: 12px;">
+                    <div style="font-size: 16px; font-weight: 600; margin-bottom: 15px; color: #fff;">
+                        📊 Was this classification helpful?
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <button onclick="giveSingleFeedback('${feedbackKey}', ${JSON.stringify(result).replace(/"/g, '&quot;')}, 'up')"
+                                class="feedback-btn ${savedFeedback === 'up' ? 'active-up' : ''}"
+                                style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 18px; transition: all 0.3s; display: flex; align-items: center; gap: 8px;">
+                            👍 <span style="font-size: 14px;">Correct</span>
+                        </button>
+                        <button onclick="giveSingleFeedback('${feedbackKey}', ${JSON.stringify(result).replace(/"/g, '&quot;')}, 'down')"
+                                class="feedback-btn ${savedFeedback === 'down' ? 'active-down' : ''}"
+                                style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 18px; transition: all 0.3s; display: flex; align-items: center; gap: 8px;">
+                            👎 <span style="font-size: 14px;">Wrong</span>
+                        </button>
+                        <div style="margin-left: auto; font-size: 13px; color: #9ca3af;">
+                            Your feedback helps improve the classifier
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function giveSingleFeedback(feedbackKey, result, type) {
+            // Save to localStorage
+            localStorage.setItem(feedbackKey, type);
+
+            // Send to server
+            const feedback = {
+                query: result.query,
+                classification: {
+                    L1: result.L1_category,
+                    L2: result.L2_subcategory,
+                    L3: result.L3_intent,
+                    L4: result.topical_group,
+                    funnel: result.funnel_stage,
+                    score: result.commercial_score,
+                    confidence: result.confidence_score
+                },
+                feedback_type: type,
+                timestamp: new Date().toISOString(),
+                filename: 'single_query'
+            };
+
+            fetch('/api/feedback', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(feedback)
+            }).then(() => {
+                // Show confirmation
+                if (type === 'up') {
+                    alert('✅ Thank you! Your positive feedback has been recorded.');
+                } else {
+                    // Ask for correction
+                    const correction = prompt(
+                        `Current Classification: "${result.topical_group}"\n\n` +
+                        `What should it be?`
+                    );
+                    if (correction) {
+                        fetch('/api/correction', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({
+                                query: result.query,
+                                original_classification: result.topical_group,
+                                suggested_correction: correction,
+                                full_classification: {
+                                    L1: result.L1_category,
+                                    L2: result.L2_subcategory,
+                                    L3: result.L3_intent,
+                                    L4: result.topical_group
+                                },
+                                filename: 'single_query',
+                                timestamp: new Date().toISOString()
+                            })
+                        }).then(() => {
+                            alert('✅ Thank you! Your correction has been saved.');
+                        });
+                    }
+                }
+                // Reload to show updated button states
+                displaySingleResult(result);
+            }).catch(err => console.log('Feedback error:', err));
+        }
+
+        function loadSampleData() {
+            console.log('📥 Loading sample data...');
+            fetch('/static/sample_queries_100.csv')
+                .then(response => {
+                    console.log('✅ Sample file fetched:', response.status);
+                    return response.blob();
+                })
+                .then(blob => {
+                    console.log('✅ Blob created:', blob.size, 'bytes');
+                    const file = new File([blob], 'sample_queries_100.csv', { type: 'text/csv' });
+                    console.log('✅ File object created:', file.name, file.size);
+                    switchMainTab('bulk');
+                    setTimeout(() => {
+                        document.getElementById('fileName').textContent = 'sample_queries_100.csv (100 queries)';
+                        console.log('🚀 Uploading file...');
+                        uploadFile(file);
+                    }, 300);
+                })
+                .catch(error => {
+                    console.error('❌ Error loading sample data:', error);
+                    showError('Error loading sample data: ' + error);
+                });
+        }
+
+        function uploadFile(file) {
+            console.log('📤 uploadFile() called with:', file.name, file.size, 'bytes');
+            const formData = new FormData();
+            formData.append('file', file);
+
+            document.getElementById('uploadSection').style.display = 'none';
+            document.getElementById('processingSection').style.display = 'block';
+            console.log('⏳ Processing section displayed');
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                console.log('📡 Upload response:', response.status, response.statusText);
+                return response.json();
+            })
+            .then(data => {
+                console.log('📊 Response data received:', data);
+                if (data.error) {
+                    console.error('❌ Server returned error:', data.error);
+                    showError(data.error);
+                    resetUpload();
+                } else {
+                    console.log('✅ Calling displayResults with', data.data?.length, 'rows');
+                    displayResults(data);
+                }
+            })
+            .catch(error => {
+                console.error('❌ Upload error:', error);
+                showError('Error uploading file: ' + error);
+                resetUpload();
+            });
+        }
+
+        function displayResults(data) {
+            console.log('🎨 displayResults() called');
+            console.log('   - data.data rows:', data.data?.length);
+            console.log('   - results_filename:', data.results_filename);
+            console.log('   - summary:', data.summary);
+
+            currentData = data.data;
+            resultsFilename = data.results_filename;
+            originalColumns = data.columns_info.other_columns;
+
+            console.log('   - Hiding processing section');
+            document.getElementById('processingSection').style.display = 'none';
+            console.log('   - Showing results section');
+            document.getElementById('resultsSection').style.display = 'block';
+
+            // Update header stats
+            console.log('   - Updating header stats');
+            document.getElementById('headerProcessed').textContent = data.summary.total_queries.toLocaleString();
+            document.getElementById('headerTopics').textContent = data.summary.unique_topics;
+            document.getElementById('headerRate').textContent = data.summary.classification_rate;
+
+            console.log('   - Calling displaySummary()');
+            displaySummary(data.summary);
+            console.log('   - Calling displayDataTable()');
+            displayDataTable(currentData, data.columns_info);
+            console.log('   - Calling displayGroupedView()');
+            displayGroupedView(currentData);
+            console.log('   - Calling populateFilters()');
+            populateFilters(data.summary);
+            console.log('✅ displayResults() complete');
+        }
+
+        function displaySummary(summary) {
+            const container = document.getElementById('summaryCards');
+            container.innerHTML = `
+                <div class="summary-card">
+                    <h3>${summary.total_queries.toLocaleString()}</h3>
+                    <p>Total Queries</p>
+                </div>
+                <div class="summary-card">
+                    <h3>${summary.classification_rate}</h3>
+                    <p>Classification Rate</p>
+                </div>
+                <div class="summary-card">
+                    <h3>${summary.unique_topics}</h3>
+                    <p>Unique Topics</p>
+                </div>
+                <div class="summary-card">
+                    <h3>${summary.classified_count.toLocaleString()}</h3>
+                    <p>Classified</p>
+                </div>
+            `;
+        }
+
+        function displayDataTable(data, columnsInfo) {
+            const header = document.getElementById('tableHeader');
+            const body = document.getElementById('tableBody');
+
+            let headerHTML = '<tr>';
+            headerHTML += '<th style="min-width: 200px;">Query</th>';
+            headerHTML += '<th style="min-width: 180px;">Topical Group</th>';
+            headerHTML += '<th>L1</th>';
+            headerHTML += '<th>L2</th>';
+            headerHTML += '<th>Intent</th>';
+            headerHTML += '<th>Funnel</th>';
+
+            originalColumns.forEach(col => {
+                headerHTML += `<th>${col}</th>`;
+            });
+
+            headerHTML += '<th style="text-align: center;">Score</th>';
+            headerHTML += '<th style="text-align: center;">Confidence</th>';
+            headerHTML += '<th style="text-align: center; min-width: 120px;">Feedback</th>';
+            headerHTML += '</tr>';
+            header.innerHTML = headerHTML;
+
+            let bodyHTML = '';
+            data.forEach((row, index) => {
+                const rowId = `row-${index}`;
+                const feedbackKey = `${resultsFilename}-${index}`;
+                const savedFeedback = localStorage.getItem(feedbackKey);
+
+                bodyHTML += '<tr>';
+                bodyHTML += `<td><strong style="color: var(--text-primary);">${row.query}</strong></td>`;
+                bodyHTML += `<td><span class="badge badge-topic" style="display: inline-block; padding: 6px 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 6px; font-size: 12px;">${row.topical_group}</span></td>`;
+                bodyHTML += `<td style="font-size: 13px;">${row.L1_category}</td>`;
+                bodyHTML += `<td style="font-size: 13px;">${row.L2_subcategory || 'N/A'}</td>`;
+                bodyHTML += `<td><span class="badge badge-intent" style="display: inline-block; padding: 4px 10px; background: ${getIntentColor(row.L3_intent)}; border-radius: 4px; font-size: 11px; color: white;">${row.L3_intent}</span></td>`;
+                bodyHTML += `<td><span class="badge badge-funnel" style="display: inline-block; padding: 4px 10px; background: ${getFunnelColor(row.funnel_stage)}; border-radius: 4px; font-size: 11px; color: white;">${row.funnel_stage}</span></td>`;
+
+                originalColumns.forEach(col => {
+                    const value = row[col] !== undefined && row[col] !== '' ? row[col] : 'N/A';
+                    bodyHTML += `<td style="font-size: 13px;">${value}</td>`;
+                });
+
+                bodyHTML += `<td style="text-align: center;"><strong style="color: ${row.commercial_score >= 70 ? '#10b981' : row.commercial_score >= 50 ? '#f59e0b' : '#6b7280'};">${row.commercial_score}</strong></td>`;
+                bodyHTML += `<td style="text-align: center;"><span style="color: ${row.confidence_score >= 10 ? '#10b981' : '#f59e0b'};">${row.confidence_score}</span></td>`;
+                bodyHTML += `<td style="text-align: center;">
+                    <button onclick="giveFeedback('${rowId}', '${feedbackKey}', ${index}, 'up')"
+                            class="feedback-btn ${savedFeedback === 'up' ? 'active-up' : ''}"
+                            style="background: none; border: none; cursor: pointer; font-size: 18px; padding: 4px 8px; transition: all 0.2s;"
+                            title="Good classification">
+                        👍
+                    </button>
+                    <button onclick="giveFeedback('${rowId}', '${feedbackKey}', ${index}, 'down')"
+                            class="feedback-btn ${savedFeedback === 'down' ? 'active-down' : ''}"
+                            style="background: none; border: none; cursor: pointer; font-size: 18px; padding: 4px 8px; transition: all 0.2s;"
+                            title="Wrong classification">
+                        👎
+                    </button>
+                </td>`;
+                bodyHTML += '</tr>';
+            });
+            body.innerHTML = bodyHTML;
+        }
+
+        function getIntentColor(intent) {
+            const colors = {
+                'Transactional': '#10b981',
+                'Informational': '#3b82f6',
+                'Comparative': '#f59e0b',
+                'Local': '#8b5cf6',
+                'Navigational': '#6366f1',
+                'Commercial Investigation': '#ec4899',
+                'Customer Support': '#06b6d4'
+            };
+            return colors[intent] || '#6b7280';
+        }
+
+        function getFunnelColor(stage) {
+            const colors = {
+                'Purchase': '#dc2626',
+                'Decision': '#f59e0b',
+                'Consideration': '#3b82f6',
+                'Awareness': '#6b7280',
+                'Retention': '#8b5cf6'
+            };
+            return colors[stage] || '#6b7280';
+        }
+
+        function displayGroupedView(data) {
+            const container = document.getElementById('groupedView');
+
+            const groups = {};
+            data.forEach(row => {
+                const topic = row.topical_group;
+                if (!groups[topic]) {
+                    groups[topic] = [];
+                }
+                groups[topic].push(row);
+            });
+
+            let html = '<h2 style="margin-bottom: 24px; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Grouped by Topic</h2>';
+            Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length).forEach(topic => {
+                const items = groups[topic];
+                html += `
+                    <div class="topic-group">
+                        <div class="topic-group-header" onclick="toggleGroup(this)">
+                            <div>
+                                <div class="topic-name">${topic}</div>
+                                <small style="color: var(--text-secondary);">${items[0].L1_category} > ${items[0].L2_subcategory}</small>
+                            </div>
+                            <span class="topic-count">${items.length}</span>
+                        </div>
+                        <div class="topic-items">
+                            ${items.map(item => `
+                                <div class="query-item">
+                                    <div><strong>${item.query}</strong></div>
+                                    <div><span class="badge badge-intent">${item.L3_intent}</span></div>
+                                    <div><span class="badge badge-funnel">${item.funnel_stage}</span></div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function populateFilters(summary) {
+            const topicFilter = document.getElementById('topicFilter');
+            summary.top_topics.forEach(topic => {
+                const option = document.createElement('option');
+                option.value = topic.topic;
+                option.textContent = `${topic.topic} (${topic.count})`;
+                topicFilter.appendChild(option);
+            });
+
+            const intentFilter = document.getElementById('intentFilter');
+            summary.intent_distribution.forEach(intent => {
+                const option = document.createElement('option');
+                option.value = intent.intent;
+                option.textContent = `${intent.intent} (${intent.count})`;
+                intentFilter.appendChild(option);
+            });
+        }
+
+        function toggleGroup(header) {
+            const items = header.nextElementSibling;
+            items.classList.toggle('expanded');
+        }
+
+        function filterTable() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const topicFilter = document.getElementById('topicFilter').value;
+            const intentFilter = document.getElementById('intentFilter').value;
+
+            const rows = document.querySelectorAll('#tableBody tr');
+            rows.forEach(row => {
+                const query = row.cells[0].textContent.toLowerCase();
+                const topic = row.cells[1].textContent;
+                const intent = row.cells[3].textContent;
+
+                const matchesSearch = query.includes(searchTerm);
+                const matchesTopic = !topicFilter || topic.includes(topicFilter);
+                const matchesIntent = !intentFilter || intent.includes(intentFilter);
+
+                row.style.display = (matchesSearch && matchesTopic && matchesIntent) ? '' : 'none';
+            });
+        }
+
+        function exportFile(format) {
+            window.location.href = `/export/${resultsFilename}/${format}`;
+        }
+
+        function resetUpload() {
+            switchMainTab('bulk');
+            document.getElementById('uploadSection').style.display = 'block';
+            document.getElementById('processingSection').style.display = 'none';
+            document.getElementById('resultsSection').style.display = 'none';
+            document.getElementById('fileInput').value = '';
+            document.getElementById('fileName').textContent = '';
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Feedback collection system
+        let feedbackData = [];
+
+        function giveFeedback(rowId, feedbackKey, rowIndex, type) {
+            // Save feedback to localStorage
+            localStorage.setItem(feedbackKey, type);
+
+            // Update button states
+            const buttons = document.querySelectorAll(`[onclick*="${rowIndex}"]`);
+            buttons.forEach(btn => {
+                btn.classList.remove('active-up', 'active-down');
+            });
+
+            event.target.classList.add(type === 'up' ? 'active-up' : 'active-down');
+
+            // Collect feedback data
+            const row = currentData[rowIndex];
+            const feedback = {
+                query: row.query,
+                classification: {
+                    L1: row.L1_category,
+                    L2: row.L2_subcategory,
+                    L3: row.L3_intent,
+                    L4: row.topical_group,
+                    funnel: row.funnel_stage,
+                    score: row.commercial_score,
+                    confidence: row.confidence_score
+                },
+                feedback_type: type,
+                timestamp: new Date().toISOString(),
+                filename: resultsFilename
+            };
+
+            feedbackData.push(feedback);
+
+            // Save feedback to server
+            fetch('/api/feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(feedback)
+            }).catch(err => console.log('Feedback save error:', err));
+
+            // Show visual confirmation
+            if (type === 'down') {
+                // For negative feedback, offer to suggest correction
+                setTimeout(() => {
+                    if (confirm('Would you like to suggest a better classification for this query?')) {
+                        showCorrectionDialog(rowIndex, row);
+                    }
+                }, 300);
+            } else {
+                // For positive feedback, just show a quick confirmation
+                const btn = event.target;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✓';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 1000);
+            }
+        }
+
+        function showCorrectionDialog(rowIndex, row) {
+            const correction = prompt(
+                `Original Query: "${row.query}"\n\n` +
+                `Current Classification:\n` +
+                `  L1: ${row.L1_category}\n` +
+                `  L2: ${row.L2_subcategory}\n` +
+                `  Topic: ${row.topical_group}\n` +
+                `  Intent: ${row.L3_intent}\n\n` +
+                `What should be the correct topical group?`
+            );
+
+            if (correction) {
+                // Save correction
+                fetch('/api/correction', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        query: row.query,
+                        original_classification: row.topical_group,
+                        suggested_correction: correction,
+                        full_classification: {
+                            L1: row.L1_category,
+                            L2: row.L2_subcategory,
+                            L3: row.L3_intent,
+                            L4: row.topical_group
+                        },
+                        filename: resultsFilename,
+                        timestamp: new Date().toISOString()
+                    })
+                }).then(() => {
+                    alert('Thank you! Your correction has been saved and will be reviewed.');
+                }).catch(err => {
+                    console.error('Correction save error:', err);
+                });
+            }
+        }
+
+        function applyLearning(event) {
+            if (!resultsFilename) {
+                showError('No results to learn from');
+                return;
+            }
+
+            if (!confirm('This will analyze unclassified queries and update the knowledge base. Continue?')) {
+                return;
+            }
+
+            // Show loading state
+            const btn = event ? event.target : document.querySelector('.btn-export[onclick*="applyLearning"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '🧠 Learning...';
+            btn.disabled = true;
+
+            fetch('/api/learn', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    filename: resultsFilename
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+
+                if (data.error) {
+                    showError(data.error);
+                } else if (data.added_count > 0) {
+                    // Show success message
+                    const message = `✅ Successfully learned ${data.added_count} new patterns!\n\n` +
+                                  `New Devices: ${data.new_entities.devices.join(', ') || 'None'}\n` +
+                                  `New Plans: ${data.new_entities.plans.join(', ') || 'None'}\n` +
+                                  `New Services: ${data.new_entities.services.join(', ') || 'None'}\n\n` +
+                                  `Backup saved: ${data.backup_path.split('/').pop()}`;
+                    alert(message);
+
+                    // Offer to reclassify
+                    if (confirm('Would you like to reclassify your data with the updated knowledge?')) {
+                        location.reload();
+                    }
+                } else {
+                    alert(data.message || 'No new patterns found to learn');
+                }
+            })
+            .catch(error => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                showError('Error applying learning: ' + error);
+            });
+        }
+    </script>
+</body>
+</html>

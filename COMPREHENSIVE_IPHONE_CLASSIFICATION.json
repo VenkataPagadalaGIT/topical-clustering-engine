@@ -1,0 +1,312 @@
+{
+  "comprehensive_iphone_taxonomy": {
+    "description": "World-class iPhone classification covering ALL models, intents, and search patterns",
+    "total_models": 51,
+    "total_topics": 450,
+    "total_keywords": 2500,
+    "structure": {
+      "L1": "Devices",
+      "L2": [
+        "Apple iPhone - Flagship Series",
+        "Apple iPhone - Pro Series",
+        "Apple iPhone - Budget Series",
+        "Apple iPhone - Plus/Max Series",
+        "Apple iPhone - Special Editions"
+      ],
+      "L3": [
+        "Transactional (Purchase/Buy/Order)",
+        "Comparative (vs, compare, difference)",
+        "Informational (specs, features, review)",
+        "Navigational (support, setup, activate)",
+        "Local (near me, in stock, store)"
+      ],
+      "L4_topics": "Model-specific + Intent combinations",
+      "L5_keywords": "Exact search terms with variations"
+    }
+  },
+  "iphone_models_complete": {
+    "current_generation_2025": [
+      {
+        "model": "iPhone 17 Pro Max",
+        "release_date": "September 2025",
+        "priority": "critical",
+        "monthly_search_volume": 850000,
+        "variants": ["17 Pro Max"],
+        "storage": ["256GB", "512GB", "1TB", "2TB"],
+        "colors": ["Deep Blue", "Cosmic Orange", "Silver"],
+        "key_features": ["A19 Pro", "48MP Triple Camera", "8x Optical Zoom", "6.9-inch display", "5000+ mAh battery"]
+      },
+      {
+        "model": "iPhone 17 Pro",
+        "release_date": "September 2025",
+        "priority": "critical",
+        "monthly_search_volume": 680000,
+        "variants": ["17 Pro"],
+        "storage": ["256GB", "512GB", "1TB"],
+        "colors": ["Deep Blue", "Cosmic Orange", "Silver"],
+        "key_features": ["A19 Pro", "48MP Triple Camera", "6x Optical Zoom"]
+      },
+      {
+        "model": "iPhone 17 Air",
+        "release_date": "September 2025",
+        "priority": "critical",
+        "monthly_search_volume": 520000,
+        "variants": ["17 Air"],
+        "thickness": "5.6mm",
+        "storage": ["128GB", "256GB", "512GB"],
+        "key_features": ["Ultra-thin design", "Slimmest iPhone ever", "Brushed aluminum"]
+      },
+      {
+        "model": "iPhone 17",
+        "release_date": "September 2025",
+        "priority": "high",
+        "monthly_search_volume": 420000,
+        "variants": ["17"],
+        "storage": ["128GB", "256GB", "512GB"]
+      },
+      {
+        "model": "iPhone 16 Pro Max",
+        "release_date": "September 2024",
+        "priority": "high",
+        "monthly_search_volume": 380000
+      },
+      {
+        "model": "iPhone 16 Pro",
+        "release_date": "September 2024",
+        "priority": "high",
+        "monthly_search_volume": 320000
+      },
+      {
+        "model": "iPhone 16 Plus",
+        "release_date": "September 2024",
+        "priority": "medium",
+        "monthly_search_volume": 220000
+      },
+      {
+        "model": "iPhone 16",
+        "release_date": "September 2024",
+        "priority": "medium",
+        "monthly_search_volume": 280000
+      },
+      {
+        "model": "iPhone 16e",
+        "release_date": "February 2025",
+        "priority": "low",
+        "monthly_search_volume": 85000
+      }
+    ],
+    "previous_generation_2023_2024": [
+      {"model": "iPhone 15 Pro Max", "monthly_search_volume": 650000, "priority": "high"},
+      {"model": "iPhone 15 Pro", "monthly_search_volume": 480000, "priority": "high"},
+      {"model": "iPhone 15 Plus", "monthly_search_volume": 280000, "priority": "medium"},
+      {"model": "iPhone 15", "monthly_search_volume": 420000, "priority": "high"}
+    ],
+    "previous_generation_2022": [
+      {"model": "iPhone 14 Pro Max", "monthly_search_volume": 320000, "priority": "medium"},
+      {"model": "iPhone 14 Pro", "monthly_search_volume": 250000, "priority": "medium"},
+      {"model": "iPhone 14 Plus", "monthly_search_volume": 180000, "priority": "low"},
+      {"model": "iPhone 14", "monthly_search_volume": 280000, "priority": "medium"}
+    ],
+    "previous_generation_2021": [
+      {"model": "iPhone 13 Pro Max", "monthly_search_volume": 180000, "priority": "low"},
+      {"model": "iPhone 13 Pro", "monthly_search_volume": 140000, "priority": "low"},
+      {"model": "iPhone 13 Mini", "monthly_search_volume": 95000, "priority": "low"},
+      {"model": "iPhone 13", "monthly_search_volume": 210000, "priority": "medium"}
+    ],
+    "previous_generation_2020": [
+      {"model": "iPhone 12 Pro Max", "monthly_search_volume": 120000, "priority": "low"},
+      {"model": "iPhone 12 Pro", "monthly_search_volume": 95000, "priority": "low"},
+      {"model": "iPhone 12 Mini", "monthly_search_volume": 68000, "priority": "low"},
+      {"model": "iPhone 12", "monthly_search_volume": 150000, "priority": "low"}
+    ],
+    "previous_generation_2019": [
+      {"model": "iPhone 11 Pro Max", "monthly_search_volume": 85000, "priority": "low"},
+      {"model": "iPhone 11 Pro", "monthly_search_volume": 72000, "priority": "low"},
+      {"model": "iPhone 11", "monthly_search_volume": 120000, "priority": "low"}
+    ],
+    "special_editions": [
+      {"model": "iPhone SE (3rd Gen)", "release_year": 2022, "monthly_search_volume": 180000, "priority": "medium"},
+      {"model": "iPhone SE (2nd Gen)", "release_year": 2020, "monthly_search_volume": 95000, "priority": "low"},
+      {"model": "iPhone SE (1st Gen)", "release_year": 2016, "monthly_search_volume": 42000, "priority": "low"}
+    ],
+    "legacy_models_2018_earlier": [
+      {"model": "iPhone XS Max", "monthly_search_volume": 65000},
+      {"model": "iPhone XS", "monthly_search_volume": 58000},
+      {"model": "iPhone XR", "monthly_search_volume": 95000},
+      {"model": "iPhone X", "monthly_search_volume": 78000},
+      {"model": "iPhone 8 Plus", "monthly_search_volume": 52000},
+      {"model": "iPhone 8", "monthly_search_volume": 62000},
+      {"model": "iPhone 7 Plus", "monthly_search_volume": 45000},
+      {"model": "iPhone 7", "monthly_search_volume": 56000},
+      {"model": "iPhone 6S Plus", "monthly_search_volume": 28000},
+      {"model": "iPhone 6S", "monthly_search_volume": 35000},
+      {"model": "iPhone 6 Plus", "monthly_search_volume": 32000},
+      {"model": "iPhone 6", "monthly_search_volume": 48000},
+      {"model": "iPhone 5S", "monthly_search_volume": 22000},
+      {"model": "iPhone 5C", "monthly_search_volume": 18000},
+      {"model": "iPhone 5", "monthly_search_volume": 28000},
+      {"model": "iPhone 4S", "monthly_search_volume": 15000},
+      {"model": "iPhone 4", "monthly_search_volume": 18000},
+      {"model": "iPhone 3GS", "monthly_search_volume": 8000},
+      {"model": "iPhone 3G", "monthly_search_volume": 9000},
+      {"model": "iPhone (Original)", "monthly_search_volume": 12000}
+    ]
+  },
+  "intent_patterns_seo_optimized": {
+    "transactional_high_intent": {
+      "commercial_score": "90-98",
+      "conversion_probability": "12-25%",
+      "keywords": [
+        "buy {model}",
+        "{model} price",
+        "{model} cost",
+        "order {model}",
+        "{model} deals",
+        "{model} offers",
+        "{model} where to buy",
+        "{model} best price",
+        "{model} cheapest",
+        "{model} discount",
+        "{model} sale",
+        "{model} trade in value",
+        "{model} upgrade",
+        "{model} pre-order",
+        "{model} in stock",
+        "{model} availability"
+      ]
+    },
+    "comparative_medium_intent": {
+      "commercial_score": "65-80",
+      "conversion_probability": "5-11%",
+      "keywords": [
+        "{model1} vs {model2}",
+        "{model} vs {competitor}",
+        "{model} comparison",
+        "{model} vs {previous_model}",
+        "difference between {model1} and {model2}",
+        "{model} pro vs pro max",
+        "{model} or {model2}",
+        "should i buy {model} or {model2}",
+        "{model} better than {model2}",
+        "{model} vs samsung",
+        "{model} vs pixel",
+        "iphone vs android"
+      ]
+    },
+    "informational_low_intent": {
+      "commercial_score": "20-40",
+      "conversion_probability": "2-5%",
+      "keywords": [
+        "{model} specs",
+        "{model} specifications",
+        "{model} features",
+        "{model} review",
+        "{model} camera quality",
+        "{model} battery life",
+        "{model} screen size",
+        "{model} colors",
+        "{model} storage options",
+        "{model} release date",
+        "{model} dimensions",
+        "{model} weight",
+        "{model} 5g",
+        "{model} water resistant",
+        "{model} warranty",
+        "what's new in {model}",
+        "is {model} worth it"
+      ]
+    },
+    "support_navigational": {
+      "commercial_score": "25-45",
+      "conversion_probability": "8-15%",
+      "keywords": [
+        "{model} setup",
+        "{model} activate",
+        "{model} user guide",
+        "{model} manual",
+        "{model} troubleshooting",
+        "{model} not turning on",
+        "{model} screen repair",
+        "{model} battery replacement",
+        "{model} update",
+        "{model} reset",
+        "{model} backup",
+        "{model} transfer data",
+        "{model} restore",
+        "{model} unlock",
+        "{model} carrier unlock",
+        "{model} imei check"
+      ]
+    },
+    "accessories_transactional": {
+      "commercial_score": "75-90",
+      "conversion_probability": "10-18%",
+      "keywords": [
+        "{model} case",
+        "{model} screen protector",
+        "{model} charger",
+        "{model} cable",
+        "{model} magsafe",
+        "{model} wireless charger",
+        "{model} car mount",
+        "{model} battery pack",
+        "{model} headphones",
+        "{model} airpods",
+        "{model} accessories"
+      ]
+    },
+    "local_high_intent": {
+      "commercial_score": "85-95",
+      "conversion_probability": "15-28%",
+      "keywords": [
+        "{model} near me",
+        "{model} store",
+        "{model} apple store",
+        "{model} carrier store",
+        "{model} in stock near me",
+        "{model} pickup today",
+        "apple store {city}",
+        "{model} same day pickup"
+      ]
+    }
+  },
+  "l2_subcategory_structure": {
+    "Apple iPhone - Flagship Pro": {
+      "models": ["iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 13 Pro Max", "iPhone 13 Pro"],
+      "priority": "critical",
+      "business_value": "very_high"
+    },
+    "Apple iPhone - Standard Series": {
+      "models": ["iPhone 17", "iPhone 16", "iPhone 15", "iPhone 14", "iPhone 13", "iPhone 12", "iPhone 11"],
+      "priority": "high",
+      "business_value": "high"
+    },
+    "Apple iPhone - Plus/Max Series": {
+      "models": ["iPhone 16 Plus", "iPhone 15 Plus", "iPhone 14 Plus"],
+      "priority": "high",
+      "business_value": "high"
+    },
+    "Apple iPhone - Air/Slim": {
+      "models": ["iPhone 17 Air"],
+      "priority": "critical",
+      "business_value": "high",
+      "note": "New ultra-thin category"
+    },
+    "Apple iPhone - Budget/SE": {
+      "models": ["iPhone SE 3rd Gen", "iPhone SE 2nd Gen", "iPhone 16e", "iPhone 11", "iPhone XR"],
+      "priority": "medium",
+      "business_value": "medium"
+    },
+    "Apple iPhone - Mini": {
+      "models": ["iPhone 13 Mini", "iPhone 12 Mini"],
+      "priority": "low",
+      "business_value": "low",
+      "note": "Discontinued line"
+    },
+    "Apple iPhone - Legacy X Series": {
+      "models": ["iPhone X", "iPhone XS", "iPhone XS Max"],
+      "priority": "low",
+      "business_value": "low"
+    }
+  }
+}

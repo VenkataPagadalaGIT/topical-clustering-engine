@@ -1,0 +1,274 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║            TELECOM QUERY GROUPING WEB APP - QUICK START                   ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📋 WHAT THIS APP DOES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Upload: CSV/Excel with queries + metadata (URL, CPC, rankings, etc.)
+        ↓
+Process: AI classification into topical groups
+        ↓
+Output: Enriched data with topics, categories, intent, funnel stages
+        ↓
+Export: Excel (multi-sheet) or Grouped CSV
+
+
+🚀 START THE APP (3 STEPS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  INSTALL DEPENDENCIES
+    cd /Users/venkatapagadala/Desktop/telecom_app
+    pip3 install -r requirements.txt
+
+2️⃣  START THE SERVER
+    python3 app.py
+
+    OR use the launcher:
+    ./start_app.sh
+
+3️⃣  OPEN IN BROWSER
+    http://localhost:5000
+
+
+📤 UPLOAD YOUR DATA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FORMAT: CSV or Excel (.csv, .xlsx, .xls)
+
+REQUIRED:
+  • One column with queries/keywords (any name works)
+
+OPTIONAL (will be preserved):
+  • URL
+  • CPC
+  • Current Ranking
+  • Search Volume
+  • Keyword Difficulty
+  • Any other metadata you want
+
+EXAMPLE:
+┌──────────────────────┬─────────────────┬──────┬─────────┐
+│ Query                │ URL             │ CPC  │ Ranking │
+├──────────────────────┼─────────────────┼──────┼─────────┤
+│ buy unlimited plan   │ /plans/unlim... │ 8.50 │ 3       │
+│ what is 5g          │ /learn/5g       │ 1.20 │ 8       │
+│ iphone 15 price     │ /devices/iphone │18.50 │ 2       │
+└──────────────────────┴─────────────────┴──────┴─────────┘
+
+
+📊 WHAT YOU GET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+YOUR DATA + NEW COLUMNS:
+  ✓ Topical Group      - Specific topic cluster
+  ✓ L1 Category        - Broad category (Mobile Plans, Devices, etc.)
+  ✓ L2 Subcategory     - Specific subcategory
+  ✓ L3 Intent          - Search intent (Transactional, Informational, etc.)
+  ✓ Funnel Stage       - Marketing funnel (Awareness, Purchase, etc.)
+  ✓ Commercial Score   - Business value (0-100)
+  ✓ Confidence Score   - Classification confidence
+
+INTERACTIVE VIEWS:
+  • All Data - Full table with search and filters
+  • Grouped by Topic - Collapsible topic clusters
+  • By Category - L1 category breakdown
+  • By Intent - Intent distribution
+
+EXPORT OPTIONS:
+  📥 Excel - Multiple sheets (All Data, Topics, Categories)
+  📥 Grouped CSV - Sorted by topic hierarchy
+
+
+🎯 TRY THE DEMO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+We included sample data to test:
+
+1. Start the app: python3 app.py
+2. Open: http://localhost:5000
+3. Upload: sample_queries.csv (in app folder)
+4. Explore: All views, filters, exports
+
+
+📁 FILE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+telecom_app/
+├── app.py                   ← Flask backend
+├── requirements.txt         ← Python packages
+├── start_app.sh            ← Easy launcher
+├── sample_queries.csv      ← Test data (40 queries)
+├── templates/
+│   └── index.html          ← Web interface
+├── uploads/                ← Your uploaded files
+└── results/                ← Generated results
+
+
+🔧 FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Drag & drop file upload
+✅ Auto-detects query column
+✅ Preserves ALL your metadata
+✅ Real-time processing feedback
+✅ Interactive data exploration
+✅ Search and filter queries
+✅ Collapsible topic groups
+✅ Multi-format export
+✅ No data loss - everything preserved
+✅ Beautiful, responsive UI
+
+
+💡 USE CASES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 SEO Content Strategy
+   → Group keywords by topic
+   → Identify content gaps
+   → Prioritize by commercial value
+
+💰 PPC Campaign Organization
+   → Group keywords by intent
+   → Organize ad groups
+   → Optimize by funnel stage
+
+🔍 Content Audit
+   → See what topics you cover
+   → Find optimization opportunities
+   → Plan new content
+
+🎯 Competitor Analysis
+   → Upload competitor keywords
+   → See their focus areas
+   → Find gaps
+
+
+⚡ QUICK TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Column Naming
+   • Use "Query" or "Keyword" for main column
+   • Other columns can be named anything
+
+2. File Size
+   • Up to 100 MB supported
+   • 10,000 queries: ~10 seconds
+   • 100,000 queries: ~2 minutes
+
+3. Best Export
+   • Excel for analysis (pivot tables, charts)
+   • Grouped CSV for imports
+
+4. Filtering
+   • Combine search + filters for precision
+   • Click topic headers to expand/collapse
+
+
+🆘 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Could not detect query column"
+   → Rename column to "Query" or "Keyword"
+   → Or put queries in first column
+
+❌ Port 5000 already in use
+   → Stop other Flask apps
+   → Or edit app.py to use different port
+
+❌ Module not found
+   → Run: pip3 install -r requirements.txt
+
+❌ Decision tree not found
+   → Ensure telecom-classification.json is in parent folder
+   → Path: /Users/venkatapagadala/Desktop/telecom-classification.json
+
+
+🎨 CLASSIFICATION EXAMPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Query: "buy unlimited data plan"
+  → Topical Group: Unlimited Plan Purchase
+  → L1: Mobile Plans
+  → L2: Unlimited Plans
+  → Intent: Transactional
+  → Funnel: Decision
+  → Commercial Score: 90
+
+Query: "what is 5g home internet"
+  → Topical Group: 5G Home Internet Service
+  → L1: Internet Services
+  → L2: 5G Home Internet
+  → Intent: Informational
+  → Funnel: Awareness
+  → Commercial Score: 35
+
+Query: "iphone 15 vs samsung s24"
+  → Topical Group: iPhone vs Samsung Comparison
+  → L1: Devices
+  → L2: Smartphones
+  → Intent: Comparative
+  → Funnel: Consideration
+  → Commercial Score: 70
+
+
+📈 WHAT HAPPENS BEHIND THE SCENES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. File Upload
+   → Detects format (CSV/Excel)
+   → Identifies query column
+   → Preserves all metadata
+
+2. Classification
+   → Extracts features from each query
+   → Matches against 800+ keyword patterns
+   → Scores by intent and context
+   → Assigns to hierarchical categories
+
+3. Enrichment
+   → Adds topical group
+   → Adds L1/L2/L3 levels
+   → Calculates scores
+   → Keeps all original data
+
+4. Results
+   → Interactive dashboard
+   → Multiple view options
+   → Export capabilities
+
+
+🎯 READY TO START?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Install
+    cd /Users/venkatapagadala/Desktop/telecom_app
+    pip3 install -r requirements.txt
+
+STEP 2: Run
+    python3 app.py
+
+STEP 3: Open
+    http://localhost:5000
+
+STEP 4: Upload
+    Try sample_queries.csv first!
+
+STEP 5: Explore
+    Check all views and export options
+
+
+📚 MORE INFO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Full Documentation: README.md
+• API Details: app.py (comments)
+• Sample Data: sample_queries.csv
+• Decision Tree: ../telecom-classification.json
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                          START NOW!                                        ║
+║                    python3 app.py                                          ║
+║              Open http://localhost:5000                                    ║
+╚════════════════════════════════════════════════════════════════════════════╝

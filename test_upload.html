@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+        }
+        .result {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        button {
+            background: #dc2626;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #991b1b;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        pre {
+            background: #0a0a0a;
+            padding: 10px;
+            overflow: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Upload & Classification</h1>
+
+    <div>
+        <h2>Test 1: Load Sample Data</h2>
+        <button onclick="testSampleLoad()">Load Sample CSV</button>
+        <div id="sampleResult" class="result"></div>
+    </div>
+
+    <div>
+        <h2>Test 2: Upload Custom File</h2>
+        <input type="file" id="fileInput" accept=".csv,.xlsx">
+        <button onclick="testFileUpload()">Upload & Classify</button>
+        <div id="uploadResult" class="result"></div>
+    </div>
+
+    <div>
+        <h2>Test 3: Direct Endpoint Test</h2>
+        <button onclick="testEndpoints()">Test All Endpoints</button>
+        <div id="endpointResult" class="result"></div>
+    </div>
+
+    <script>
+        async function testSampleLoad() {
+            const resultDiv = document.getElementById('sampleResult');
+            resultDiv.innerHTML = '⏳ Loading sample CSV...';
+
+            try {
+                // Fetch sample CSV
+                const response = await fetch('/static/sample_queries.csv');
+                const blob = await response.blob();
+                const file = new File([blob], 'sample_queries.csv', { type: 'text/csv' });
+
+                resultDiv.innerHTML += '<br>✅ Sample CSV loaded (' + blob.size + ' bytes)';
+
+                // Upload to classify
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const uploadResponse = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await uploadResponse.json();
+
+                if (data.error) {
+                    resultDiv.innerHTML += '<br>❌ Error: ' + data.error;
+                } else {
+                    resultDiv.innerHTML += '<br>✅ Classification complete!';
+                    resultDiv.innerHTML += '<br>📊 Results: ' + data.data.length + ' queries classified';
+                    resultDiv.innerHTML += '<br><pre>' + JSON.stringify(data.summary, null, 2) + '</pre>';
+
+                    // Show first 3 results
+                    resultDiv.innerHTML += '<br><strong>First 3 Results:</strong>';
+                    data.data.slice(0, 3).forEach((row, i) => {
+                        resultDiv.innerHTML += `<br>${i+1}. ${row.query} → ${row.topical_group}`;
+                    });
+                }
+            } catch (error) {
+                resultDiv.innerHTML += '<br>❌ Error: ' + error.message;
+                console.error('Error:', error);
+            }
+        }
+
+        async function testFileUpload() {
+            const resultDiv = document.getElementById('uploadResult');
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                resultDiv.innerHTML = '❌ Please select a file first';
+                return;
+            }
+
+            resultDiv.innerHTML = '⏳ Uploading ' + file.name + '...';
+
+            try {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    resultDiv.innerHTML += '<br>❌ Error: ' + data.error;
+                } else {
+                    resultDiv.innerHTML += '<br>✅ Upload successful!';
+                    resultDiv.innerHTML += '<br>📊 Classified: ' + data.data.length + ' queries';
+                    resultDiv.innerHTML += '<br><pre>' + JSON.stringify(data.summary, null, 2) + '</pre>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML += '<br>❌ Error: ' + error.message;
+                console.error('Error:', error);
+            }
+        }
+
+        async function testEndpoints() {
+            const resultDiv = document.getElementById('endpointResult');
+            resultDiv.innerHTML = '🧪 Testing all endpoints...<br>';
+
+            // Test 1: Sample CSV
+            try {
+                const r1 = await fetch('/static/sample_queries.csv');
+                resultDiv.innerHTML += r1.ok ? '✅ Sample CSV accessible<br>' : '❌ Sample CSV not found<br>';
+            } catch (e) {
+                resultDiv.innerHTML += '❌ Sample CSV error: ' + e.message + '<br>';
+            }
+
+            // Test 2: Feedback API
+            try {
+                const r2 = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({query: 'test', feedback_type: 'up', timestamp: new Date().toISOString()})
+                });
+                resultDiv.innerHTML += r2.ok ? '✅ Feedback API working<br>' : '❌ Feedback API failed<br>';
+            } catch (e) {
+                resultDiv.innerHTML += '❌ Feedback API error: ' + e.message + '<br>';
+            }
+
+            // Test 3: Upload endpoint
+            resultDiv.innerHTML += '<br>🔍 To test upload, use buttons above<br>';
+        }
+    </script>
+</body>
+</html>

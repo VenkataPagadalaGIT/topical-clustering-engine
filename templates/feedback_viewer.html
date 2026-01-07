@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Viewer - Telecom Classifier</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #dc2626;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #dc2626;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        .section {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #dc2626;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background: #0a0a0a;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #dc2626;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #333;
+        }
+        tr:hover {
+            background: #222;
+        }
+        .feedback-up {
+            color: #10b981;
+            font-weight: bold;
+        }
+        .feedback-down {
+            color: #dc2626;
+            font-weight: bold;
+        }
+        .btn {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+        }
+        .timestamp {
+            color: #6b7280;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Feedback & Corrections Viewer</h1>
+
+        <div class="stats" id="stats"></div>
+
+        <div class="section">
+            <div class="section-title">👍👎 All Feedback</div>
+            <button class="btn" onclick="loadFeedback()">🔄 Refresh Feedback</button>
+            <button class="btn" onclick="exportFeedback()">📥 Export CSV</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Query</th>
+                        <th>Classification</th>
+                        <th>Feedback</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody id="feedbackTable"></tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <div class="section-title">✏️ User Corrections</div>
+            <button class="btn" onclick="loadCorrections()">🔄 Refresh Corrections</button>
+            <button class="btn" onclick="openCorrectionsCSV()">📂 Open CSV File</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Query</th>
+                        <th>Original Classification</th>
+                        <th>Suggested Correction</th>
+                    </tr>
+                </thead>
+                <tbody id="correctionsTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let feedbackData = [];
+        let correctionsData = [];
+
+        async function loadFeedback() {
+            try {
+                const response = await fetch('/api/get-feedback');
+                const data = await response.json();
+                feedbackData = data.feedback || [];
+                updateStats();
+                displayFeedback();
+            } catch (error) {
+                console.error('Error loading feedback:', error);
+                alert('Error loading feedback. Data files may not exist yet.');
+            }
+        }
+
+        async function loadCorrections() {
+            try {
+                const response = await fetch('/api/get-corrections');
+                const data = await response.json();
+                correctionsData = data.corrections || [];
+                displayCorrections();
+            } catch (error) {
+                console.error('Error loading corrections:', error);
+                alert('Error loading corrections. Data files may not exist yet.');
+            }
+        }
+
+        function updateStats() {
+            const thumbsUp = feedbackData.filter(f => f.feedback_type === 'up').length;
+            const thumbsDown = feedbackData.filter(f => f.feedback_type === 'down').length;
+            const total = feedbackData.length;
+            const accuracy = total > 0 ? Math.round((thumbsUp / total) * 100) : 0;
+
+            document.getElementById('stats').innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-value">${total}</div>
+                    <div class="stat-label">Total Feedback</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: #10b981;">${thumbsUp}</div>
+                    <div class="stat-label">Thumbs Up 👍</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: #dc2626;">${thumbsDown}</div>
+                    <div class="stat-label">Thumbs Down 👎</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${accuracy}%</div>
+                    <div class="stat-label">User Approval</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${correctionsData.length}</div>
+                    <div class="stat-label">Corrections Submitted</div>
+                </div>
+            `;
+        }
+
+        function displayFeedback() {
+            const tbody = document.getElementById('feedbackTable');
+            tbody.innerHTML = feedbackData.map(f => `
+                <tr>
+                    <td class="timestamp">${new Date(f.timestamp).toLocaleString()}</td>
+                    <td><strong>${f.query}</strong></td>
+                    <td>${f.classification.L4}</td>
+                    <td class="${f.feedback_type === 'up' ? 'feedback-up' : 'feedback-down'}">
+                        ${f.feedback_type === 'up' ? '👍 Correct' : '👎 Wrong'}
+                    </td>
+                    <td>${f.classification.confidence}</td>
+                </tr>
+            `).join('');
+        }
+
+        function displayCorrections() {
+            const tbody = document.getElementById('correctionsTable');
+            if (correctionsData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: #6b7280;">No corrections submitted yet</td></tr>';
+                return;
+            }
+            tbody.innerHTML = correctionsData.map(c => `
+                <tr>
+                    <td class="timestamp">${new Date(c.timestamp).toLocaleString()}</td>
+                    <td><strong>${c.query}</strong></td>
+                    <td>${c.original_L4}</td>
+                    <td style="color: #10b981;"><strong>${c.suggested_correction}</strong></td>
+                </tr>
+            `).join('');
+        }
+
+        function exportFeedback() {
+            const csv = 'Timestamp,Query,Classification,Feedback Type,Confidence\\n' +
+                feedbackData.map(f =>
+                    `"${f.timestamp}","${f.query}","${f.classification.L4}","${f.feedback_type}","${f.classification.confidence}"`
+                ).join('\\n');
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `feedback_export_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+        }
+
+        function openCorrectionsCSV() {
+            window.open('/static/../learning/corrections/corrections_master.csv', '_blank');
+        }
+
+        // Load data on page load
+        loadFeedback();
+        loadCorrections();
+
+        // Auto-refresh every 30 seconds
+        setInterval(() => {
+            loadFeedback();
+            loadCorrections();
+        }, 30000);
+    </script>
+</body>
+</html>

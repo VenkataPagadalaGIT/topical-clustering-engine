@@ -1,0 +1,3162 @@
+{
+  "bottom_to_top": [
+    {
+      "query_id": 1,
+      "query": "buy iphone 17 pro max",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_51",
+          "name": "Apple iPhone - Pro Series",
+          "slug": "apple-iphone---pro-series"
+        },
+        "L3": {
+          "id": "L3_51",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Transactional Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_101",
+          "topic": "iPhone 17 Pro Max Purchase",
+          "slug": "iphone-17-pro-max-purchase",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_1001",
+          "keyword": "buy iphone 17 pro max",
+          "intent_score": 96,
+          "search_volume": 127500
+        }
+      },
+      "path": "Query \u2192 buy iphone 17 pro max \u2192 iPhone 17 Pro Max Purchase \u2192 Transactional \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "confidence": 18.92,
+      "score": 92,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 2,
+      "query": "iphone 17 air price",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_52",
+          "name": "Apple iPhone - Air Edition",
+          "slug": "apple-iphone---air-edition"
+        },
+        "L3": {
+          "id": "L3_56",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Transactional Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_131",
+          "topic": "iPhone 17 Air Purchase",
+          "slug": "iphone-17-air-purchase",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_1132",
+          "keyword": "iphone 17 air price",
+          "intent_score": 96,
+          "search_volume": 78000
+        }
+      },
+      "path": "Query \u2192 iphone 17 air price \u2192 iPhone 17 Air Purchase \u2192 Transactional \u2192 Apple iPhone - Air Edition \u2192 Devices",
+      "confidence": 15.92,
+      "score": 92,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 3,
+      "query": "iphone 16 vs iphone 17",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_53",
+          "name": "Apple iPhone - Standard Series",
+          "slug": "apple-iphone---standard-series"
+        },
+        "L3": {
+          "id": "L3_62",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Comparative Intent",
+          "commercial_score": 70,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_210",
+          "topic": "iPhone 16 Comparison",
+          "slug": "iphone-16-comparison",
+          "content_type": "educational_article"
+        },
+        "L5": {
+          "id": "L5_1474",
+          "keyword": "iphone 16 vs",
+          "intent_score": 72,
+          "search_volume": 42000
+        }
+      },
+      "path": "Query \u2192 iphone 16 vs \u2192 iPhone 16 Comparison \u2192 Comparative \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "confidence": 20.7,
+      "score": 70,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 4,
+      "query": "cheap iphone 15 deals",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_53",
+          "name": "Apple iPhone - Standard Series",
+          "slug": "apple-iphone---standard-series"
+        },
+        "L3": {
+          "id": "L3_61",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Transactional Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_281",
+          "topic": "iPhone 15 Purchase",
+          "slug": "iphone-15-purchase",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_1785",
+          "keyword": "iphone 15 deals",
+          "intent_score": 96,
+          "search_volume": 63000
+        }
+      },
+      "path": "Query \u2192 iphone 15 deals \u2192 iPhone 15 Purchase \u2192 Transactional \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "confidence": 15.92,
+      "score": 92,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 5,
+      "query": "iphone 14 trade in value",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_53",
+          "name": "Apple iPhone - Standard Series",
+          "slug": "apple-iphone---standard-series"
+        },
+        "L3": {
+          "id": "L3_61",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Transactional Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_342",
+          "topic": "iPhone 14 Trade-In",
+          "slug": "iphone-14-trade-in",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_2049",
+          "keyword": "iphone 14 trade in value",
+          "intent_score": 88,
+          "search_volume": 42000
+        }
+      },
+      "path": "Query \u2192 iphone 14 trade in value \u2192 iPhone 14 Trade-In \u2192 Transactional \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "confidence": 15.92,
+      "score": 92,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 6,
+      "query": "iphone 13 battery replacement",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_53",
+          "name": "Apple iPhone - Standard Series",
+          "slug": "apple-iphone---standard-series"
+        },
+        "L3": {
+          "id": "L3_64",
+          "intent_category": "Navigational",
+          "intent_subcategory": "Navigational Intent",
+          "commercial_score": 35,
+          "funnel_stage": "Post-Purchase"
+        },
+        "L4": {
+          "id": "L4_413",
+          "topic": "iPhone 13 Repair",
+          "slug": "iphone-13-repair",
+          "content_type": "educational_article"
+        },
+        "L5": {
+          "id": "L5_2355",
+          "keyword": "iphone 13 battery replacement",
+          "intent_score": 45,
+          "search_volume": 31500
+        }
+      },
+      "path": "Query \u2192 iphone 13 battery replacement \u2192 iPhone 13 Repair \u2192 Navigational \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "confidence": 15.35,
+      "score": 35,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 7,
+      "query": "iphone 12 screen repair",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_53",
+          "name": "Apple iPhone - Standard Series",
+          "slug": "apple-iphone---standard-series"
+        },
+        "L3": {
+          "id": "L3_64",
+          "intent_category": "Navigational",
+          "intent_subcategory": "Navigational Intent",
+          "commercial_score": 35,
+          "funnel_stage": "Post-Purchase"
+        },
+        "L4": {
+          "id": "L4_473",
+          "topic": "iPhone 12 Repair",
+          "slug": "iphone-12-repair",
+          "content_type": "educational_article"
+        },
+        "L5": {
+          "id": "L5_2614",
+          "keyword": "iphone 12 screen repair",
+          "intent_score": 45,
+          "search_volume": 22500
+        }
+      },
+      "path": "Query \u2192 iphone 12 screen repair \u2192 iPhone 12 Repair \u2192 Navigational \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "confidence": 15.35,
+      "score": 35,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 8,
+      "query": "iphone se 2024 features",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_010",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 96,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_011",
+          "topic": "iPhone 15 Pro Max Purchase",
+          "slug": "iphone-15-pro-max-buy",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_017",
+          "keyword": "buy iphone 15 pro max",
+          "intent_score": 98,
+          "search_volume": 42500
+        }
+      },
+      "path": "Query \u2192 buy iphone 15 pro max \u2192 iPhone 15 Pro Max Purchase \u2192 Transactional \u2192 Smartphones \u2192 Devices",
+      "confidence": 0.96,
+      "score": 96,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 9,
+      "query": "iphone 17 release date",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_53",
+          "name": "Apple iPhone - Standard Series",
+          "slug": "apple-iphone---standard-series"
+        },
+        "L3": {
+          "id": "L3_63",
+          "intent_category": "Informational",
+          "intent_subcategory": "Informational Intent",
+          "commercial_score": 30,
+          "funnel_stage": "Awareness"
+        },
+        "L4": {
+          "id": "L4_154",
+          "topic": "iPhone 17 Release Information",
+          "slug": "iphone-17-release-information",
+          "content_type": "educational_article"
+        },
+        "L5": {
+          "id": "L5_1230",
+          "keyword": "iphone 17 release date",
+          "intent_score": 25,
+          "search_volume": 63000
+        }
+      },
+      "path": "Query \u2192 iphone 17 release date \u2192 iPhone 17 Release Information \u2192 Informational \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "confidence": 15.3,
+      "score": 30,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 10,
+      "query": "best iphone for seniors",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_010",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 96,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_011",
+          "topic": "iPhone 15 Pro Max Purchase",
+          "slug": "iphone-15-pro-max-buy",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_017",
+          "keyword": "buy iphone 15 pro max",
+          "intent_score": 98,
+          "search_volume": 42500
+        }
+      },
+      "path": "Query \u2192 buy iphone 15 pro max \u2192 iPhone 15 Pro Max Purchase \u2192 Transactional \u2192 Smartphones \u2192 Devices",
+      "confidence": 0.96,
+      "score": 96,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 11,
+      "query": "samsung galaxy s24 ultra",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_011",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 72,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_013",
+          "topic": "iPhone 15 vs Samsung S24",
+          "slug": "iphone-15-vs-samsung-s24",
+          "content_type": "comparison_page"
+        },
+        "L5": {
+          "id": "L5_020",
+          "keyword": "iphone 15 vs samsung s24",
+          "intent_score": 70,
+          "search_volume": 32100
+        }
+      },
+      "path": "Query \u2192 iphone 15 vs samsung s24 \u2192 iPhone 15 vs Samsung S24 \u2192 Comparative \u2192 Smartphones \u2192 Devices",
+      "confidence": 0.72,
+      "score": 72,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 12,
+      "query": "galaxy z fold 6 price",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_010",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 96,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_011",
+          "topic": "iPhone 15 Pro Max Purchase",
+          "slug": "iphone-15-pro-max-buy",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_018",
+          "keyword": "iphone 15 pro max price",
+          "intent_score": 92,
+          "search_volume": 68900
+        }
+      },
+      "path": "Query \u2192 iphone 15 pro max price \u2192 iPhone 15 Pro Max Purchase \u2192 Transactional \u2192 Smartphones \u2192 Devices",
+      "confidence": 0.96,
+      "score": 96,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 13,
+      "query": "samsung a54 vs a34",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_011",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 72,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_013",
+          "topic": "iPhone 15 vs Samsung S24",
+          "slug": "iphone-15-vs-samsung-s24",
+          "content_type": "comparison_page"
+        },
+        "L5": {
+          "id": "L5_020",
+          "keyword": "iphone 15 vs samsung s24",
+          "intent_score": 70,
+          "search_volume": 32100
+        }
+      },
+      "path": "Query \u2192 iphone 15 vs samsung s24 \u2192 iPhone 15 vs Samsung S24 \u2192 Comparative \u2192 Smartphones \u2192 Devices",
+      "confidence": 5.72,
+      "score": 72,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 14,
+      "query": "galaxy watch 6 classic",
+      "classification": null,
+      "path": "UNCLASSIFIED",
+      "hierarchy_valid": false
+    },
+    {
+      "query_id": 15,
+      "query": "samsung tablet deals",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_51",
+          "name": "Apple iPhone - Pro Series",
+          "slug": "apple-iphone---pro-series"
+        },
+        "L3": {
+          "id": "L3_51",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Transactional Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_101",
+          "topic": "iPhone 17 Pro Max Purchase",
+          "slug": "iphone-17-pro-max-purchase",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_1005",
+          "keyword": "iphone 17 pro max deals",
+          "intent_score": 96,
+          "search_volume": 127500
+        }
+      },
+      "path": "Query \u2192 iphone 17 pro max deals \u2192 iPhone 17 Pro Max Purchase \u2192 Transactional \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "confidence": 0.92,
+      "score": 92,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 16,
+      "query": "galaxy buds pro 3",
+      "classification": null,
+      "path": "UNCLASSIFIED",
+      "hierarchy_valid": false
+    },
+    {
+      "query_id": 17,
+      "query": "samsung trade in program",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_010",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 96,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_012",
+          "topic": "iPhone Trade-In",
+          "slug": "iphone-trade-in",
+          "content_type": "service_page"
+        },
+        "L5": {
+          "id": "L5_019",
+          "keyword": "iphone trade in",
+          "intent_score": 85,
+          "search_volume": 28400
+        }
+      },
+      "path": "Query \u2192 iphone trade in \u2192 iPhone Trade-In \u2192 Transactional \u2192 Smartphones \u2192 Devices",
+      "confidence": 0.96,
+      "score": 96,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 18,
+      "query": "galaxy s25 rumors",
+      "classification": null,
+      "path": "UNCLASSIFIED",
+      "hierarchy_valid": false
+    },
+    {
+      "query_id": 19,
+      "query": "pixel 9 pro camera",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_020",
+          "name": "Google Pixel",
+          "slug": "google-pixel"
+        },
+        "L3": {
+          "id": "L3_053",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 70,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_770",
+          "topic": "Pixel 9 Comparison",
+          "slug": "pixel-9-comparison",
+          "content_type": "educational_guide"
+        },
+        "L5": {
+          "id": "L5_3027",
+          "keyword": "pixel 9 vs pixel 8",
+          "intent_score": 70,
+          "search_volume": 100
+        }
+      },
+      "path": "Query \u2192 pixel 9 vs pixel 8 \u2192 Pixel 9 Comparison \u2192 Comparative \u2192 Google Pixel \u2192 Devices",
+      "confidence": 0.7,
+      "score": 70,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 20,
+      "query": "pixel fold review",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_020",
+          "name": "Google Pixel",
+          "slug": "google-pixel"
+        },
+        "L3": {
+          "id": "L3_053",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 70,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_770",
+          "topic": "Pixel 9 Comparison",
+          "slug": "pixel-9-comparison",
+          "content_type": "educational_guide"
+        },
+        "L5": {
+          "id": "L5_3027",
+          "keyword": "pixel 9 vs pixel 8",
+          "intent_score": 70,
+          "search_volume": 100
+        }
+      },
+      "path": "Query \u2192 pixel 9 vs pixel 8 \u2192 Pixel 9 Comparison \u2192 Comparative \u2192 Google Pixel \u2192 Devices",
+      "confidence": 0.7,
+      "score": 70,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 21,
+      "query": "pixel watch 3",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_020",
+          "name": "Google Pixel",
+          "slug": "google-pixel"
+        },
+        "L3": {
+          "id": "L3_053",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 70,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_770",
+          "topic": "Pixel 9 Comparison",
+          "slug": "pixel-9-comparison",
+          "content_type": "educational_guide"
+        },
+        "L5": {
+          "id": "L5_3027",
+          "keyword": "pixel 9 vs pixel 8",
+          "intent_score": 70,
+          "search_volume": 100
+        }
+      },
+      "path": "Query \u2192 pixel 9 vs pixel 8 \u2192 Pixel 9 Comparison \u2192 Comparative \u2192 Google Pixel \u2192 Devices",
+      "confidence": 0.7,
+      "score": 70,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 22,
+      "query": "pixel 8a budget phone",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 23,
+      "query": "pixel buds pro 2",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_020",
+          "name": "Google Pixel",
+          "slug": "google-pixel"
+        },
+        "L3": {
+          "id": "L3_053",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 70,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_770",
+          "topic": "Pixel 9 Comparison",
+          "slug": "pixel-9-comparison",
+          "content_type": "educational_guide"
+        },
+        "L5": {
+          "id": "L5_3027",
+          "keyword": "pixel 9 vs pixel 8",
+          "intent_score": 70,
+          "search_volume": 100
+        }
+      },
+      "path": "Query \u2192 pixel 9 vs pixel 8 \u2192 Pixel 9 Comparison \u2192 Comparative \u2192 Google Pixel \u2192 Devices",
+      "confidence": 0.7,
+      "score": 70,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 24,
+      "query": "unlimited data plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_003",
+          "name": "Unlimited Plans",
+          "slug": "unlimited"
+        },
+        "L3": {
+          "id": "L3_004",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Pricing Intent",
+          "commercial_score": 90,
+          "funnel_stage": "Decision"
+        },
+        "L4": {
+          "id": "L4_005",
+          "topic": "Unlimited Plan Purchase",
+          "slug": "unlimited-plan-purchase",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_009",
+          "keyword": "unlimited data plan",
+          "intent_score": 85,
+          "search_volume": 18100
+        }
+      },
+      "path": "Query \u2192 unlimited data plan \u2192 Unlimited Plan Purchase \u2192 Transactional \u2192 Unlimited Plans \u2192 Mobile Plans",
+      "confidence": 15.9,
+      "score": 90,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 25,
+      "query": "family plan 4 lines",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 26,
+      "query": "prepaid phone plans",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 15.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 27,
+      "query": "senior discount plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 28,
+      "query": "military family plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 29,
+      "query": "student phone discount",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 30,
+      "query": "business mobile plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 31,
+      "query": "international calling plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 32,
+      "query": "unlimited hotspot plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 33,
+      "query": "best budget plan",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_001",
+          "keyword": "buy prepaid plan",
+          "intent_score": 95,
+          "search_volume": 12100
+        }
+      },
+      "path": "Query \u2192 buy prepaid plan \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 34,
+      "query": "5g home internet",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_008",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 94,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_009",
+          "topic": "Fiber Internet Order",
+          "slug": "fiber-order",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_015",
+          "keyword": "order fiber internet",
+          "intent_score": 95,
+          "search_volume": 9800
+        }
+      },
+      "path": "Query \u2192 order fiber internet \u2192 Fiber Internet Order \u2192 Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 0.94,
+      "score": 94,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 35,
+      "query": "fiber optic internet speed",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_008",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 94,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_009",
+          "topic": "Fiber Internet Order",
+          "slug": "fiber-order",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_015",
+          "keyword": "order fiber internet",
+          "intent_score": 95,
+          "search_volume": 9800
+        }
+      },
+      "path": "Query \u2192 order fiber internet \u2192 Fiber Internet Order \u2192 Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 0.94,
+      "score": 94,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 36,
+      "query": "home internet installation",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_008",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 94,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_009",
+          "topic": "Fiber Internet Order",
+          "slug": "fiber-order",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_015",
+          "keyword": "order fiber internet",
+          "intent_score": 95,
+          "search_volume": 9800
+        }
+      },
+      "path": "Query \u2192 order fiber internet \u2192 Fiber Internet Order \u2192 Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 0.94,
+      "score": 94,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 37,
+      "query": "internet only plans",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 38,
+      "query": "gigabit internet pricing",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_008",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 94,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_009",
+          "topic": "Fiber Internet Order",
+          "slug": "fiber-order",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_015",
+          "keyword": "order fiber internet",
+          "intent_score": 95,
+          "search_volume": 9800
+        }
+      },
+      "path": "Query \u2192 order fiber internet \u2192 Fiber Internet Order \u2192 Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 0.94,
+      "score": 94,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 39,
+      "query": "wifi router upgrade",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_51",
+          "name": "Apple iPhone - Pro Series",
+          "slug": "apple-iphone---pro-series"
+        },
+        "L3": {
+          "id": "L3_51",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Transactional Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_102",
+          "topic": "iPhone 17 Pro Max Trade-In",
+          "slug": "iphone-17-pro-max-trade-in",
+          "content_type": "product_page"
+        },
+        "L5": {
+          "id": "L5_1012",
+          "keyword": "iphone 17 pro max upgrade",
+          "intent_score": 88,
+          "search_volume": 127500
+        }
+      },
+      "path": "Query \u2192 iphone 17 pro max upgrade \u2192 iPhone 17 Pro Max Trade-In \u2192 Transactional \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "confidence": 0.92,
+      "score": 92,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 40,
+      "query": "internet vs cable bundle",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_009",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 68,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_010",
+          "topic": "Fiber vs Cable",
+          "slug": "fiber-vs-cable",
+          "content_type": "comparison_page"
+        },
+        "L5": {
+          "id": "L5_016",
+          "keyword": "fiber vs cable internet",
+          "intent_score": 65,
+          "search_volume": 16200
+        }
+      },
+      "path": "Query \u2192 fiber vs cable internet \u2192 Fiber vs Cable \u2192 Comparative \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 5.68,
+      "score": 68,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 41,
+      "query": "rural internet options",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_008",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 94,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_009",
+          "topic": "Fiber Internet Order",
+          "slug": "fiber-order",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_015",
+          "keyword": "order fiber internet",
+          "intent_score": 95,
+          "search_volume": 9800
+        }
+      },
+      "path": "Query \u2192 order fiber internet \u2192 Fiber Internet Order \u2192 Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 0.94,
+      "score": 94,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 42,
+      "query": "phone screen repair near me",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_51",
+          "name": "Apple iPhone - Pro Series",
+          "slug": "apple-iphone---pro-series"
+        },
+        "L3": {
+          "id": "L3_55",
+          "intent_category": "Local",
+          "intent_subcategory": "Local Intent",
+          "commercial_score": 90,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_114",
+          "topic": "iPhone 17 Pro Max Store Locations",
+          "slug": "iphone-17-pro-max-store-locations",
+          "content_type": "educational_article"
+        },
+        "L5": {
+          "id": "L5_1058",
+          "keyword": "iphone 17 pro max near me",
+          "intent_score": 88,
+          "search_volume": 127500
+        }
+      },
+      "path": "Query \u2192 iphone 17 pro max near me \u2192 iPhone 17 Pro Max Store Locations \u2192 Local \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "confidence": 5.9,
+      "score": 90,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 43,
+      "query": "activate new phone",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 44,
+      "query": "unlock my phone",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 45,
+      "query": "port phone number",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_001",
+          "topic": "Prepaid Plan Purchase",
+          "slug": "prepaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_002",
+          "keyword": "prepaid phone plans",
+          "intent_score": 90,
+          "search_volume": 18300
+        }
+      },
+      "path": "Query \u2192 prepaid phone plans \u2192 Prepaid Plan Purchase \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 46,
+      "query": "cancel service online",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_001",
+          "name": "Prepaid Plans",
+          "slug": "prepaid"
+        },
+        "L3": {
+          "id": "L3_001",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Direct Purchase Intent",
+          "commercial_score": 95,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_002",
+          "topic": "Prepaid Refill Options",
+          "slug": "prepaid-refill",
+          "content_type": "service_page"
+        },
+        "L5": {
+          "id": "L5_005",
+          "keyword": "prepaid refill online",
+          "intent_score": 97,
+          "search_volume": 6700
+        }
+      },
+      "path": "Query \u2192 prepaid refill online \u2192 Prepaid Refill Options \u2192 Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "confidence": 0.95,
+      "score": 95,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 47,
+      "query": "customer service hours",
+      "classification": {
+        "L1": {
+          "id": "L1_006",
+          "name": "Support & Account",
+          "slug": "support"
+        },
+        "L2": {
+          "id": "L2_011",
+          "name": "Technical Support",
+          "slug": "technical"
+        },
+        "L3": {
+          "id": "L3_016",
+          "intent_category": "Customer Support",
+          "intent_subcategory": "Troubleshooting",
+          "commercial_score": 20,
+          "funnel_stage": "Post-Purchase"
+        },
+        "L4": {
+          "id": "L4_018",
+          "topic": "No Service Issue",
+          "slug": "no-service",
+          "content_type": "troubleshooting_guide"
+        },
+        "L5": {
+          "id": "L5_025",
+          "keyword": "no service",
+          "intent_score": 18,
+          "search_volume": 42100
+        }
+      },
+      "path": "Query \u2192 no service \u2192 No Service Issue \u2192 Customer Support \u2192 Technical Support \u2192 Support & Account",
+      "confidence": 0.2,
+      "score": 20,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 48,
+      "query": "iphone vs samsung flagship",
+      "classification": {
+        "L1": {
+          "id": "L1_003",
+          "name": "Devices",
+          "slug": "devices"
+        },
+        "L2": {
+          "id": "L2_007",
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        "L3": {
+          "id": "L3_011",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 72,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_013",
+          "topic": "iPhone 15 vs Samsung S24",
+          "slug": "iphone-15-vs-samsung-s24",
+          "content_type": "comparison_page"
+        },
+        "L5": {
+          "id": "L5_020",
+          "keyword": "iphone 15 vs samsung s24",
+          "intent_score": 70,
+          "search_volume": 32100
+        }
+      },
+      "path": "Query \u2192 iphone 15 vs samsung s24 \u2192 iPhone 15 vs Samsung S24 \u2192 Comparative \u2192 Smartphones \u2192 Devices",
+      "confidence": 5.72,
+      "score": 72,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 49,
+      "query": "5g home vs fiber internet",
+      "classification": {
+        "L1": {
+          "id": "L1_002",
+          "name": "Internet Services",
+          "slug": "internet"
+        },
+        "L2": {
+          "id": "L2_006",
+          "name": "Fiber Internet",
+          "slug": "fiber"
+        },
+        "L3": {
+          "id": "L3_009",
+          "intent_category": "Comparative",
+          "intent_subcategory": "Direct Comparison",
+          "commercial_score": 68,
+          "funnel_stage": "Consideration"
+        },
+        "L4": {
+          "id": "L4_010",
+          "topic": "Fiber vs Cable",
+          "slug": "fiber-vs-cable",
+          "content_type": "comparison_page"
+        },
+        "L5": {
+          "id": "L5_016",
+          "keyword": "fiber vs cable internet",
+          "intent_score": 65,
+          "search_volume": 16200
+        }
+      },
+      "path": "Query \u2192 fiber vs cable internet \u2192 Fiber vs Cable \u2192 Comparative \u2192 Fiber Internet \u2192 Internet Services",
+      "confidence": 5.68,
+      "score": 68,
+      "hierarchy_valid": true
+    },
+    {
+      "query_id": 50,
+      "query": "prepaid vs postpaid plans",
+      "classification": {
+        "L1": {
+          "id": "L1_001",
+          "name": "Mobile Plans",
+          "slug": "mobile-plans"
+        },
+        "L2": {
+          "id": "L2_002",
+          "name": "Postpaid Plans",
+          "slug": "postpaid"
+        },
+        "L3": {
+          "id": "L3_003",
+          "intent_category": "Transactional",
+          "intent_subcategory": "Sign-Up Intent",
+          "commercial_score": 92,
+          "funnel_stage": "Purchase"
+        },
+        "L4": {
+          "id": "L4_004",
+          "topic": "Postpaid Plan Purchase",
+          "slug": "postpaid-plan-purchase",
+          "content_type": "product_landing_page"
+        },
+        "L5": {
+          "id": "L5_008",
+          "keyword": "postpaid plans",
+          "intent_score": 88,
+          "search_volume": 15600
+        }
+      },
+      "path": "Query \u2192 postpaid plans \u2192 Postpaid Plan Purchase \u2192 Transactional \u2192 Postpaid Plans \u2192 Mobile Plans",
+      "confidence": 15.92,
+      "score": 92,
+      "hierarchy_valid": true
+    }
+  ],
+  "top_to_bottom": [
+    {
+      "l1": "classification_system",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    },
+    {
+      "l1": "levels",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    },
+    {
+      "l1": "taxonomy",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    },
+    {
+      "l1": "intent_mapping",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    },
+    {
+      "l1": "url_structure_templates",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    },
+    {
+      "l1": "content_type_mapping",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    },
+    {
+      "l1": "expansion_log",
+      "l2_count": 0,
+      "l3_count": 0,
+      "l4_count": 0,
+      "matching_queries": 0,
+      "sample_queries": []
+    }
+  ],
+  "middle_to_top": [
+    {
+      "query_id": 1,
+      "query": "buy iphone 17 pro max",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Apple iPhone - Pro Series",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 2,
+      "query": "iphone 17 air price",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Apple iPhone - Air Edition",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Apple iPhone - Air Edition \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 3,
+      "query": "iphone 16 vs iphone 17",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Apple iPhone - Standard Series",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 4,
+      "query": "cheap iphone 15 deals",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Apple iPhone - Standard Series",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 5,
+      "query": "iphone 14 trade in value",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Apple iPhone - Standard Series",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 6,
+      "query": "iphone 13 battery replacement",
+      "l3_intent": "Navigational",
+      "l2_subcategory": "Apple iPhone - Standard Series",
+      "l1_category": "Devices",
+      "path": "Navigational \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 7,
+      "query": "iphone 12 screen repair",
+      "l3_intent": "Navigational",
+      "l2_subcategory": "Apple iPhone - Standard Series",
+      "l1_category": "Devices",
+      "path": "Navigational \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 8,
+      "query": "iphone se 2024 features",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 9,
+      "query": "iphone 17 release date",
+      "l3_intent": "Informational",
+      "l2_subcategory": "Apple iPhone - Standard Series",
+      "l1_category": "Devices",
+      "path": "Informational \u2192 Apple iPhone - Standard Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 10,
+      "query": "best iphone for seniors",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 11,
+      "query": "samsung galaxy s24 ultra",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 12,
+      "query": "galaxy z fold 6 price",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 13,
+      "query": "samsung a54 vs a34",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 14,
+      "query": "galaxy watch 6 classic",
+      "rollup_valid": false
+    },
+    {
+      "query_id": 15,
+      "query": "samsung tablet deals",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Apple iPhone - Pro Series",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 16,
+      "query": "galaxy buds pro 3",
+      "rollup_valid": false
+    },
+    {
+      "query_id": 17,
+      "query": "samsung trade in program",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 18,
+      "query": "galaxy s25 rumors",
+      "rollup_valid": false
+    },
+    {
+      "query_id": 19,
+      "query": "pixel 9 pro camera",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Google Pixel",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Google Pixel \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 20,
+      "query": "pixel fold review",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Google Pixel",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Google Pixel \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 21,
+      "query": "pixel watch 3",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Google Pixel",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Google Pixel \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 22,
+      "query": "pixel 8a budget phone",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 23,
+      "query": "pixel buds pro 2",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Google Pixel",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Google Pixel \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 24,
+      "query": "unlimited data plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Unlimited Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Unlimited Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 25,
+      "query": "family plan 4 lines",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 26,
+      "query": "prepaid phone plans",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 27,
+      "query": "senior discount plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 28,
+      "query": "military family plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 29,
+      "query": "student phone discount",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 30,
+      "query": "business mobile plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 31,
+      "query": "international calling plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 32,
+      "query": "unlimited hotspot plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 33,
+      "query": "best budget plan",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 34,
+      "query": "5g home internet",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 35,
+      "query": "fiber optic internet speed",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 36,
+      "query": "home internet installation",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 37,
+      "query": "internet only plans",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 38,
+      "query": "gigabit internet pricing",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 39,
+      "query": "wifi router upgrade",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Apple iPhone - Pro Series",
+      "l1_category": "Devices",
+      "path": "Transactional \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 40,
+      "query": "internet vs cable bundle",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Comparative \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 41,
+      "query": "rural internet options",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Transactional \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 42,
+      "query": "phone screen repair near me",
+      "l3_intent": "Local",
+      "l2_subcategory": "Apple iPhone - Pro Series",
+      "l1_category": "Devices",
+      "path": "Local \u2192 Apple iPhone - Pro Series \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 43,
+      "query": "activate new phone",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 44,
+      "query": "unlock my phone",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 45,
+      "query": "port phone number",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 46,
+      "query": "cancel service online",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Prepaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Prepaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 47,
+      "query": "customer service hours",
+      "l3_intent": "Customer Support",
+      "l2_subcategory": "Technical Support",
+      "l1_category": "Support & Account",
+      "path": "Customer Support \u2192 Technical Support \u2192 Support & Account",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 48,
+      "query": "iphone vs samsung flagship",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Smartphones",
+      "l1_category": "Devices",
+      "path": "Comparative \u2192 Smartphones \u2192 Devices",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 49,
+      "query": "5g home vs fiber internet",
+      "l3_intent": "Comparative",
+      "l2_subcategory": "Fiber Internet",
+      "l1_category": "Internet Services",
+      "path": "Comparative \u2192 Fiber Internet \u2192 Internet Services",
+      "rollup_valid": true
+    },
+    {
+      "query_id": 50,
+      "query": "prepaid vs postpaid plans",
+      "l3_intent": "Transactional",
+      "l2_subcategory": "Postpaid Plans",
+      "l1_category": "Mobile Plans",
+      "path": "Transactional \u2192 Postpaid Plans \u2192 Mobile Plans",
+      "rollup_valid": true
+    }
+  ],
+  "middle_to_bottom": [
+    {
+      "query_id": 1,
+      "query": "buy iphone 17 pro max",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 17 Pro Max Purchase",
+      "l5_keywords": "buy iphone 17 pro max",
+      "path": "Transactional \u2192 iPhone 17 Pro Max Purchase \u2192 buy iphone 17 pro max \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 18.92
+    },
+    {
+      "query_id": 2,
+      "query": "iphone 17 air price",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 17 Air Purchase",
+      "l5_keywords": "iphone 17 air price",
+      "path": "Transactional \u2192 iPhone 17 Air Purchase \u2192 iphone 17 air price \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.92
+    },
+    {
+      "query_id": 3,
+      "query": "iphone 16 vs iphone 17",
+      "l3_intent": "Comparative",
+      "l4_topic": "iPhone 16 Comparison",
+      "l5_keywords": "iphone 16 vs",
+      "path": "Comparative \u2192 iPhone 16 Comparison \u2192 iphone 16 vs \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 20.7
+    },
+    {
+      "query_id": 4,
+      "query": "cheap iphone 15 deals",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 15 Purchase",
+      "l5_keywords": "iphone 15 deals",
+      "path": "Transactional \u2192 iPhone 15 Purchase \u2192 iphone 15 deals \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.92
+    },
+    {
+      "query_id": 5,
+      "query": "iphone 14 trade in value",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 14 Trade-In",
+      "l5_keywords": "iphone 14 trade in value",
+      "path": "Transactional \u2192 iPhone 14 Trade-In \u2192 iphone 14 trade in value \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.92
+    },
+    {
+      "query_id": 6,
+      "query": "iphone 13 battery replacement",
+      "l3_intent": "Navigational",
+      "l4_topic": "iPhone 13 Repair",
+      "l5_keywords": "iphone 13 battery replacement",
+      "path": "Navigational \u2192 iPhone 13 Repair \u2192 iphone 13 battery replacement \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.35
+    },
+    {
+      "query_id": 7,
+      "query": "iphone 12 screen repair",
+      "l3_intent": "Navigational",
+      "l4_topic": "iPhone 12 Repair",
+      "l5_keywords": "iphone 12 screen repair",
+      "path": "Navigational \u2192 iPhone 12 Repair \u2192 iphone 12 screen repair \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.35
+    },
+    {
+      "query_id": 8,
+      "query": "iphone se 2024 features",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 15 Pro Max Purchase",
+      "l5_keywords": "buy iphone 15 pro max",
+      "path": "Transactional \u2192 iPhone 15 Pro Max Purchase \u2192 buy iphone 15 pro max \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.96
+    },
+    {
+      "query_id": 9,
+      "query": "iphone 17 release date",
+      "l3_intent": "Informational",
+      "l4_topic": "iPhone 17 Release Information",
+      "l5_keywords": "iphone 17 release date",
+      "path": "Informational \u2192 iPhone 17 Release Information \u2192 iphone 17 release date \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.3
+    },
+    {
+      "query_id": 10,
+      "query": "best iphone for seniors",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 15 Pro Max Purchase",
+      "l5_keywords": "buy iphone 15 pro max",
+      "path": "Transactional \u2192 iPhone 15 Pro Max Purchase \u2192 buy iphone 15 pro max \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.96
+    },
+    {
+      "query_id": 11,
+      "query": "samsung galaxy s24 ultra",
+      "l3_intent": "Comparative",
+      "l4_topic": "iPhone 15 vs Samsung S24",
+      "l5_keywords": "iphone 15 vs samsung s24",
+      "path": "Comparative \u2192 iPhone 15 vs Samsung S24 \u2192 iphone 15 vs samsung s24 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.72
+    },
+    {
+      "query_id": 12,
+      "query": "galaxy z fold 6 price",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 15 Pro Max Purchase",
+      "l5_keywords": "iphone 15 pro max price",
+      "path": "Transactional \u2192 iPhone 15 Pro Max Purchase \u2192 iphone 15 pro max price \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.96
+    },
+    {
+      "query_id": 13,
+      "query": "samsung a54 vs a34",
+      "l3_intent": "Comparative",
+      "l4_topic": "iPhone 15 vs Samsung S24",
+      "l5_keywords": "iphone 15 vs samsung s24",
+      "path": "Comparative \u2192 iPhone 15 vs Samsung S24 \u2192 iphone 15 vs samsung s24 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 5.72
+    },
+    {
+      "query_id": 14,
+      "query": "galaxy watch 6 classic",
+      "drilldown_valid": false
+    },
+    {
+      "query_id": 15,
+      "query": "samsung tablet deals",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 17 Pro Max Purchase",
+      "l5_keywords": "iphone 17 pro max deals",
+      "path": "Transactional \u2192 iPhone 17 Pro Max Purchase \u2192 iphone 17 pro max deals \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.92
+    },
+    {
+      "query_id": 16,
+      "query": "galaxy buds pro 3",
+      "drilldown_valid": false
+    },
+    {
+      "query_id": 17,
+      "query": "samsung trade in program",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone Trade-In",
+      "l5_keywords": "iphone trade in",
+      "path": "Transactional \u2192 iPhone Trade-In \u2192 iphone trade in \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.96
+    },
+    {
+      "query_id": 18,
+      "query": "galaxy s25 rumors",
+      "drilldown_valid": false
+    },
+    {
+      "query_id": 19,
+      "query": "pixel 9 pro camera",
+      "l3_intent": "Comparative",
+      "l4_topic": "Pixel 9 Comparison",
+      "l5_keywords": "pixel 9 vs pixel 8",
+      "path": "Comparative \u2192 Pixel 9 Comparison \u2192 pixel 9 vs pixel 8 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.7
+    },
+    {
+      "query_id": 20,
+      "query": "pixel fold review",
+      "l3_intent": "Comparative",
+      "l4_topic": "Pixel 9 Comparison",
+      "l5_keywords": "pixel 9 vs pixel 8",
+      "path": "Comparative \u2192 Pixel 9 Comparison \u2192 pixel 9 vs pixel 8 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.7
+    },
+    {
+      "query_id": 21,
+      "query": "pixel watch 3",
+      "l3_intent": "Comparative",
+      "l4_topic": "Pixel 9 Comparison",
+      "l5_keywords": "pixel 9 vs pixel 8",
+      "path": "Comparative \u2192 Pixel 9 Comparison \u2192 pixel 9 vs pixel 8 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.7
+    },
+    {
+      "query_id": 22,
+      "query": "pixel 8a budget phone",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 23,
+      "query": "pixel buds pro 2",
+      "l3_intent": "Comparative",
+      "l4_topic": "Pixel 9 Comparison",
+      "l5_keywords": "pixel 9 vs pixel 8",
+      "path": "Comparative \u2192 Pixel 9 Comparison \u2192 pixel 9 vs pixel 8 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.7
+    },
+    {
+      "query_id": 24,
+      "query": "unlimited data plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Unlimited Plan Purchase",
+      "l5_keywords": "unlimited data plan",
+      "path": "Transactional \u2192 Unlimited Plan Purchase \u2192 unlimited data plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.9
+    },
+    {
+      "query_id": 25,
+      "query": "family plan 4 lines",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 26,
+      "query": "prepaid phone plans",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.95
+    },
+    {
+      "query_id": 27,
+      "query": "senior discount plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 28,
+      "query": "military family plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 29,
+      "query": "student phone discount",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 30,
+      "query": "business mobile plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 31,
+      "query": "international calling plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 32,
+      "query": "unlimited hotspot plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 33,
+      "query": "best budget plan",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "buy prepaid plan",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 buy prepaid plan \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 34,
+      "query": "5g home internet",
+      "l3_intent": "Transactional",
+      "l4_topic": "Fiber Internet Order",
+      "l5_keywords": "order fiber internet",
+      "path": "Transactional \u2192 Fiber Internet Order \u2192 order fiber internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.94
+    },
+    {
+      "query_id": 35,
+      "query": "fiber optic internet speed",
+      "l3_intent": "Transactional",
+      "l4_topic": "Fiber Internet Order",
+      "l5_keywords": "order fiber internet",
+      "path": "Transactional \u2192 Fiber Internet Order \u2192 order fiber internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.94
+    },
+    {
+      "query_id": 36,
+      "query": "home internet installation",
+      "l3_intent": "Transactional",
+      "l4_topic": "Fiber Internet Order",
+      "l5_keywords": "order fiber internet",
+      "path": "Transactional \u2192 Fiber Internet Order \u2192 order fiber internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.94
+    },
+    {
+      "query_id": 37,
+      "query": "internet only plans",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 38,
+      "query": "gigabit internet pricing",
+      "l3_intent": "Transactional",
+      "l4_topic": "Fiber Internet Order",
+      "l5_keywords": "order fiber internet",
+      "path": "Transactional \u2192 Fiber Internet Order \u2192 order fiber internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.94
+    },
+    {
+      "query_id": 39,
+      "query": "wifi router upgrade",
+      "l3_intent": "Transactional",
+      "l4_topic": "iPhone 17 Pro Max Trade-In",
+      "l5_keywords": "iphone 17 pro max upgrade",
+      "path": "Transactional \u2192 iPhone 17 Pro Max Trade-In \u2192 iphone 17 pro max upgrade \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.92
+    },
+    {
+      "query_id": 40,
+      "query": "internet vs cable bundle",
+      "l3_intent": "Comparative",
+      "l4_topic": "Fiber vs Cable",
+      "l5_keywords": "fiber vs cable internet",
+      "path": "Comparative \u2192 Fiber vs Cable \u2192 fiber vs cable internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 5.68
+    },
+    {
+      "query_id": 41,
+      "query": "rural internet options",
+      "l3_intent": "Transactional",
+      "l4_topic": "Fiber Internet Order",
+      "l5_keywords": "order fiber internet",
+      "path": "Transactional \u2192 Fiber Internet Order \u2192 order fiber internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.94
+    },
+    {
+      "query_id": 42,
+      "query": "phone screen repair near me",
+      "l3_intent": "Local",
+      "l4_topic": "iPhone 17 Pro Max Store Locations",
+      "l5_keywords": "iphone 17 pro max near me",
+      "path": "Local \u2192 iPhone 17 Pro Max Store Locations \u2192 iphone 17 pro max near me \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 5.9
+    },
+    {
+      "query_id": 43,
+      "query": "activate new phone",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 44,
+      "query": "unlock my phone",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 45,
+      "query": "port phone number",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Plan Purchase",
+      "l5_keywords": "prepaid phone plans",
+      "path": "Transactional \u2192 Prepaid Plan Purchase \u2192 prepaid phone plans \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 46,
+      "query": "cancel service online",
+      "l3_intent": "Transactional",
+      "l4_topic": "Prepaid Refill Options",
+      "l5_keywords": "prepaid refill online",
+      "path": "Transactional \u2192 Prepaid Refill Options \u2192 prepaid refill online \u2192 Match",
+      "drilldown_valid": false,
+      "confidence": 0.95
+    },
+    {
+      "query_id": 47,
+      "query": "customer service hours",
+      "l3_intent": "Customer Support",
+      "l4_topic": "No Service Issue",
+      "l5_keywords": "no service",
+      "path": "Customer Support \u2192 No Service Issue \u2192 no service \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 0.2
+    },
+    {
+      "query_id": 48,
+      "query": "iphone vs samsung flagship",
+      "l3_intent": "Comparative",
+      "l4_topic": "iPhone 15 vs Samsung S24",
+      "l5_keywords": "iphone 15 vs samsung s24",
+      "path": "Comparative \u2192 iPhone 15 vs Samsung S24 \u2192 iphone 15 vs samsung s24 \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 5.72
+    },
+    {
+      "query_id": 49,
+      "query": "5g home vs fiber internet",
+      "l3_intent": "Comparative",
+      "l4_topic": "Fiber vs Cable",
+      "l5_keywords": "fiber vs cable internet",
+      "path": "Comparative \u2192 Fiber vs Cable \u2192 fiber vs cable internet \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 5.68
+    },
+    {
+      "query_id": 50,
+      "query": "prepaid vs postpaid plans",
+      "l3_intent": "Transactional",
+      "l4_topic": "Postpaid Plan Purchase",
+      "l5_keywords": "postpaid plans",
+      "path": "Transactional \u2192 Postpaid Plan Purchase \u2192 postpaid plans \u2192 Match",
+      "drilldown_valid": true,
+      "confidence": 15.92
+    }
+  ],
+  "summary": {
+    "timestamp": "2025-11-02T09:15:30.869658",
+    "total_queries": 50,
+    "bottom_to_top": {
+      "classified": 47,
+      "valid": 47,
+      "rate": 94.0
+    },
+    "middle_to_top": {
+      "classified": 47,
+      "valid": 47
+    },
+    "middle_to_bottom": {
+      "classified": 47,
+      "valid": 36
+    },
+    "confidence": {
+      "average": 5.047872340425532,
+      "min": 0.2,
+      "max": 20.7,
+      "low_count": 36
+    }
+  },
+  "detailed_metrics": {
+    "classification": {
+      "total_queries": 50,
+      "classified_count": 47,
+      "classified_rate": 94.0,
+      "unclassified_count": 3,
+      "unclassified_queries": [
+        "galaxy watch 6 classic",
+        "galaxy buds pro 3",
+        "galaxy s25 rumors"
+      ]
+    },
+    "confidence": {
+      "average": 5.047872340425532,
+      "median": 0.95,
+      "stdev": 6.6018837681147176,
+      "min": 0.2,
+      "max": 20.7,
+      "distribution": {
+        "0-5": 31,
+        "5-10": 5,
+        "10-15": 0,
+        "15-20": 10,
+        "20+": 1
+      }
+    },
+    "intent_distribution": {
+      "Transactional": 32,
+      "Comparative": 10,
+      "Navigational": 2,
+      "Informational": 1,
+      "Local": 1,
+      "Customer Support": 1
+    },
+    "category_distribution": {
+      "Devices": 22,
+      "Mobile Plans": 17,
+      "Internet Services": 7,
+      "Support & Account": 1
+    },
+    "issues": {
+      "unclassified": [
+        "galaxy watch 6 classic",
+        "galaxy buds pro 3",
+        "galaxy s25 rumors"
+      ],
+      "drilldown_failures": [
+        {
+          "query": "galaxy z fold 6 price",
+          "intent": "Transactional",
+          "topic": "iPhone 15 Pro Max Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "samsung tablet deals",
+          "intent": "Transactional",
+          "topic": "iPhone 17 Pro Max Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "samsung trade in program",
+          "intent": "Transactional",
+          "topic": "iPhone Trade-In",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "pixel 8a budget phone",
+          "intent": "Transactional",
+          "topic": "Prepaid Plan Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "student phone discount",
+          "intent": "Transactional",
+          "topic": "Prepaid Plan Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "wifi router upgrade",
+          "intent": "Transactional",
+          "topic": "iPhone 17 Pro Max Trade-In",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "phone screen repair near me",
+          "intent": "Local",
+          "topic": "iPhone 17 Pro Max Store Locations",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "activate new phone",
+          "intent": "Transactional",
+          "topic": "Prepaid Plan Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "unlock my phone",
+          "intent": "Transactional",
+          "topic": "Prepaid Plan Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "port phone number",
+          "intent": "Transactional",
+          "topic": "Prepaid Plan Purchase",
+          "reason": "keyword_mismatch"
+        },
+        {
+          "query": "cancel service online",
+          "intent": "Transactional",
+          "topic": "Prepaid Refill Options",
+          "reason": "keyword_mismatch"
+        }
+      ],
+      "low_confidence": [
+        {
+          "query": "iphone se 2024 features",
+          "confidence": 0.96,
+          "topic": "iPhone 15 Pro Max Purchase"
+        },
+        {
+          "query": "best iphone for seniors",
+          "confidence": 0.96,
+          "topic": "iPhone 15 Pro Max Purchase"
+        },
+        {
+          "query": "samsung galaxy s24 ultra",
+          "confidence": 0.72,
+          "topic": "iPhone 15 vs Samsung S24"
+        },
+        {
+          "query": "galaxy z fold 6 price",
+          "confidence": 0.96,
+          "topic": "iPhone 15 Pro Max Purchase"
+        },
+        {
+          "query": "samsung tablet deals",
+          "confidence": 0.92,
+          "topic": "iPhone 17 Pro Max Purchase"
+        },
+        {
+          "query": "samsung trade in program",
+          "confidence": 0.96,
+          "topic": "iPhone Trade-In"
+        },
+        {
+          "query": "pixel 9 pro camera",
+          "confidence": 0.7,
+          "topic": "Pixel 9 Comparison"
+        },
+        {
+          "query": "pixel fold review",
+          "confidence": 0.7,
+          "topic": "Pixel 9 Comparison"
+        },
+        {
+          "query": "pixel watch 3",
+          "confidence": 0.7,
+          "topic": "Pixel 9 Comparison"
+        },
+        {
+          "query": "pixel 8a budget phone",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "pixel buds pro 2",
+          "confidence": 0.7,
+          "topic": "Pixel 9 Comparison"
+        },
+        {
+          "query": "family plan 4 lines",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "senior discount plan",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "military family plan",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "student phone discount",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "business mobile plan",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "international calling plan",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "unlimited hotspot plan",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "best budget plan",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "5g home internet",
+          "confidence": 0.94,
+          "topic": "Fiber Internet Order"
+        },
+        {
+          "query": "fiber optic internet speed",
+          "confidence": 0.94,
+          "topic": "Fiber Internet Order"
+        },
+        {
+          "query": "home internet installation",
+          "confidence": 0.94,
+          "topic": "Fiber Internet Order"
+        },
+        {
+          "query": "internet only plans",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "gigabit internet pricing",
+          "confidence": 0.94,
+          "topic": "Fiber Internet Order"
+        },
+        {
+          "query": "wifi router upgrade",
+          "confidence": 0.92,
+          "topic": "iPhone 17 Pro Max Trade-In"
+        },
+        {
+          "query": "rural internet options",
+          "confidence": 0.94,
+          "topic": "Fiber Internet Order"
+        },
+        {
+          "query": "activate new phone",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "unlock my phone",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "port phone number",
+          "confidence": 0.95,
+          "topic": "Prepaid Plan Purchase"
+        },
+        {
+          "query": "cancel service online",
+          "confidence": 0.95,
+          "topic": "Prepaid Refill Options"
+        },
+        {
+          "query": "customer service hours",
+          "confidence": 0.2,
+          "topic": "No Service Issue"
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "category": "Coverage",
+      "issue": "3 unclassified queries (6.0%)",
+      "action": "Add keywords/topics for: galaxy watch 6 classic, galaxy buds pro 3, galaxy s25 rumors",
+      "impact": "Classification rate improvement"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Confidence",
+      "issue": "31 queries with confidence < 5",
+      "action": "Expand keyword coverage for low-confidence topics",
+      "impact": "Average confidence improvement"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Drilldown",
+      "issue": "11 drilldown validation failures",
+      "action": "Refine L5 keywords for 'Prepaid Plan Purchase' and similar topics",
+      "impact": "Drilldown validity improvement"
+    }
+  ]
+}

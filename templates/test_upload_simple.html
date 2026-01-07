@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Bulk Upload - Simple Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+        }
+        .section {
+            background: #1a1a1a;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        button {
+            background: #dc2626;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #991b1b;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+            color: #fff;
+        }
+        .result {
+            background: #0a0a0a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            max-height: 400px;
+            overflow: auto;
+        }
+        .log {
+            font-family: monospace;
+            font-size: 13px;
+            margin: 5px 0;
+        }
+        .success { color: #10b981; }
+        .error { color: #dc2626; }
+        .info { color: #60a5fa; }
+        .warn { color: #f59e0b; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Bulk Upload Feature</h1>
+    <p>This is a simplified test page to diagnose bulk upload issues.</p>
+
+    <div class="section">
+        <h2>Test 1: Upload Sample File (100 queries)</h2>
+        <button onclick="testSampleUpload()">Load & Upload Sample CSV</button>
+        <div id="test1Result" class="result"></div>
+    </div>
+
+    <div class="section">
+        <h2>Test 2: Upload Custom File</h2>
+        <input type="file" id="customFile" accept=".csv,.xlsx">
+        <button onclick="testCustomUpload()">Upload Selected File</button>
+        <div id="test2Result" class="result"></div>
+    </div>
+
+    <div class="section">
+        <h2>Test 3: Direct Endpoint Test</h2>
+        <button onclick="testEndpoint()">Test /upload Endpoint</button>
+        <div id="test3Result" class="result"></div>
+    </div>
+
+    <div class="section">
+        <h2>Console Output</h2>
+        <div id="consoleOutput" class="result"></div>
+    </div>
+
+    <script>
+        // Intercept console.log to display on page
+        const consoleDiv = document.getElementById('consoleOutput');
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+
+        function addLog(type, ...args) {
+            const message = args.join(' ');
+            const logDiv = document.createElement('div');
+            logDiv.className = `log ${type}`;
+            logDiv.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            consoleDiv.appendChild(logDiv);
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+
+        console.log = function(...args) {
+            originalLog(...args);
+            addLog('info', ...args);
+        };
+
+        console.error = function(...args) {
+            originalError(...args);
+            addLog('error', ...args);
+        };
+
+        console.warn = function(...args) {
+            originalWarn(...args);
+            addLog('warn', ...args);
+        };
+
+        // Test 1: Sample file upload
+        async function testSampleUpload() {
+            const resultDiv = document.getElementById('test1Result');
+            resultDiv.innerHTML = '';
+
+            try {
+                console.log('📥 Fetching sample CSV file...');
+                const response = await fetch('/static/sample_queries_100.csv');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                console.log('✅ Sample file fetched:', response.status);
+                const blob = await response.blob();
+                console.log('✅ Blob created:', blob.size, 'bytes');
+
+                const file = new File([blob], 'sample_queries_100.csv', { type: 'text/csv' });
+                console.log('✅ File object created:', file.name);
+
+                console.log('📤 Uploading to /upload endpoint...');
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const uploadResponse = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                console.log('📡 Upload response status:', uploadResponse.status);
+
+                const data = await uploadResponse.json();
+                console.log('📊 Response data:', data);
+
+                if (data.error) {
+                    resultDiv.innerHTML = `<span class="error">❌ Error: ${data.error}</span>`;
+                } else {
+                    resultDiv.innerHTML = `
+                        <span class="success">✅ Upload successful!</span><br>
+                        <span class="info">📊 Classified: ${data.data?.length || 0} queries</span><br>
+                        <span class="info">📁 Results file: ${data.results_filename}</span><br>
+                        <span class="info">🎯 Unique topics: ${data.summary?.unique_topics || 0}</span><br>
+                        <pre>${JSON.stringify(data.summary, null, 2)}</pre>
+                    `;
+
+                    console.log('✅ Test 1 PASSED - Upload successful');
+                }
+            } catch (error) {
+                console.error('❌ Test 1 FAILED:', error);
+                resultDiv.innerHTML = `<span class="error">❌ Error: ${error.message}</span>`;
+            }
+        }
+
+        // Test 2: Custom file upload
+        async function testCustomUpload() {
+            const resultDiv = document.getElementById('test2Result');
+            const fileInput = document.getElementById('customFile');
+            const file = fileInput.files[0];
+
+            resultDiv.innerHTML = '';
+
+            if (!file) {
+                console.warn('⚠️ No file selected');
+                resultDiv.innerHTML = '<span class="warn">⚠️ Please select a file first</span>';
+                return;
+            }
+
+            try {
+                console.log('📂 File selected:', file.name, file.size, 'bytes');
+                console.log('📤 Uploading custom file...');
+
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                console.log('📡 Upload response:', response.status);
+
+                const data = await response.json();
+                console.log('📊 Response data:', data);
+
+                if (data.error) {
+                    resultDiv.innerHTML = `<span class="error">❌ Error: ${data.error}</span>`;
+                } else {
+                    resultDiv.innerHTML = `
+                        <span class="success">✅ Upload successful!</span><br>
+                        <span class="info">📊 Classified: ${data.data?.length || 0} queries</span><br>
+                        <pre>${JSON.stringify(data.summary, null, 2)}</pre>
+                    `;
+
+                    console.log('✅ Test 2 PASSED - Custom upload successful');
+                }
+            } catch (error) {
+                console.error('❌ Test 2 FAILED:', error);
+                resultDiv.innerHTML = `<span class="error">❌ Error: ${error.message}</span>`;
+            }
+        }
+
+        // Test 3: Endpoint availability
+        async function testEndpoint() {
+            const resultDiv = document.getElementById('test3Result');
+            resultDiv.innerHTML = '';
+
+            try {
+                console.log('🔍 Testing /upload endpoint availability...');
+
+                // Create minimal test file
+                const testContent = 'Query,URL,CPC\ntest query,/test,1.50';
+                const blob = new Blob([testContent], { type: 'text/csv' });
+                const file = new File([blob], 'test.csv', { type: 'text/csv' });
+
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                console.log('📡 Endpoint response:', response.status, response.statusText);
+
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `
+                        <span class="success">✅ Endpoint is working!</span><br>
+                        <span class="info">Status: ${response.status}</span><br>
+                        <span class="info">Data received: ${JSON.stringify(data).substring(0, 200)}...</span>
+                    `;
+                    console.log('✅ Test 3 PASSED - Endpoint accessible');
+                } else {
+                    resultDiv.innerHTML = `<span class="error">❌ Endpoint error: ${response.status}</span>`;
+                    console.error('❌ Test 3 FAILED - HTTP', response.status);
+                }
+            } catch (error) {
+                console.error('❌ Test 3 FAILED:', error);
+                resultDiv.innerHTML = `<span class="error">❌ Error: ${error.message}</span>`;
+            }
+        }
+
+        console.log('🚀 Test page loaded. Ready to test bulk upload.');
+        console.log('👆 Click any button above to run tests.');
+    </script>
+</body>
+</html>
