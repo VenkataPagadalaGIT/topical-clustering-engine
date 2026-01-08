@@ -1,0 +1,197 @@
+{
+  "total_keywords": 111259,
+  "branded_count": 94754,
+  "non_branded_count": 16505,
+  "branded_percentage": 85.17,
+  "breakdown": {
+    "carrier_only": 46424,
+    "phone_only": 24237,
+    "both": 24093
+  },
+  "top_carriers": {
+    "metro": 9605,
+    "t mobile": 9157,
+    "verizon": 5702,
+    "t-mobile": 5474,
+    "boost": 5458,
+    "at&t": 5303,
+    "sprint": 5179,
+    "cricket": 4328,
+    "visible": 3404,
+    "att": 3166
+  },
+  "top_phone_brands": {
+    "iphone": 11071,
+    "galaxy": 7681,
+    "pixel": 7071,
+    "moto": 5158,
+    "oneplus": 4490,
+    "samsung": 4157,
+    "google": 2685,
+    "galaxy s": 2638,
+    "tcl": 2422,
+    "nothing": 2420
+  },
+  "by_category": {
+    "Devices": {
+      "branded": 41486,
+      "non_branded": 4458
+    },
+    "Mobile Plans": {
+      "branded": 7400,
+      "non_branded": 5388
+    },
+    "Deals": {
+      "branded": 7261,
+      "non_branded": 1457
+    },
+    "Features": {
+      "branded": 7606,
+      "non_branded": 791
+    },
+    "Local": {
+      "branded": 7075,
+      "non_branded": 351
+    },
+    "Pricing": {
+      "branded": 2230,
+      "non_branded": 945
+    },
+    "Comparisons": {
+      "branded": 2660,
+      "non_branded": 28
+    },
+    "FAQ": {
+      "branded": 2073,
+      "non_branded": 78
+    },
+    "Switching": {
+      "branded": 1950,
+      "non_branded": 0
+    },
+    "Support": {
+      "branded": 983,
+      "non_branded": 733
+    },
+    "Coverage": {
+      "branded": 869,
+      "non_branded": 269
+    },
+    "Trade In": {
+      "branded": 1109,
+      "non_branded": 16
+    },
+    "Retail": {
+      "branded": 868,
+      "non_branded": 91
+    },
+    "Unlocking": {
+      "branded": 920,
+      "non_branded": 33
+    },
+    "Activation": {
+      "branded": 915,
+      "non_branded": 18
+    },
+    "International": {
+      "branded": 720,
+      "non_branded": 192
+    },
+    "SIM": {
+      "branded": 600,
+      "non_branded": 199
+    },
+    "Connected Devices": {
+      "branded": 770,
+      "non_branded": 25
+    },
+    "Accessories": {
+      "branded": 638,
+      "non_branded": 139
+    },
+    "Customer Service": {
+      "branded": 733,
+      "non_branded": 22
+    },
+    "Reviews": {
+      "branded": 709,
+      "non_branded": 0
+    },
+    "Carriers": {
+      "branded": 590,
+      "non_branded": 67
+    },
+    "BYOD": {
+      "branded": 620,
+      "non_branded": 15
+    },
+    "Perks": {
+      "branded": 435,
+      "non_branded": 60
+    },
+    "Family Plans": {
+      "branded": 430,
+      "non_branded": 59
+    },
+    "Use Cases": {
+      "branded": 345,
+      "non_branded": 120
+    },
+    "Billing": {
+      "branded": 425,
+      "non_branded": 19
+    },
+    "Internet": {
+      "branded": 112,
+      "non_branded": 322
+    },
+    "Prepaid": {
+      "branded": 375,
+      "non_branded": 45
+    },
+    "Business": {
+      "branded": 321,
+      "non_branded": 40
+    },
+    "Home Internet": {
+      "branded": 220,
+      "non_branded": 119
+    },
+    "Technology": {
+      "branded": 210,
+      "non_branded": 99
+    },
+    "Services": {
+      "branded": 260,
+      "non_branded": 44
+    },
+    "Data": {
+      "branded": 258,
+      "non_branded": 39
+    },
+    "Speed": {
+      "branded": 220,
+      "non_branded": 22
+    },
+    "Bundles": {
+      "branded": 196,
+      "non_branded": 38
+    },
+    "Trending": {
+      "branded": 23,
+      "non_branded": 139
+    },
+    "Postpaid": {
+      "branded": 100,
+      "non_branded": 11
+    },
+    "MVNO": {
+      "branded": 21,
+      "non_branded": 6
+    },
+    "Apps": {
+      "branded": 18,
+      "non_branded": 8
+    }
+  }
+}
